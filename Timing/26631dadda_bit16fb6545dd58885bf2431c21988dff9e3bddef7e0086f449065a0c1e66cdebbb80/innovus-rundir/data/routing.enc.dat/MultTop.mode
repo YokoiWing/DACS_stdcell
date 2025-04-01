@@ -1,0 +1,82 @@
+if {![namespace exists ::IMEX]} { namespace eval ::IMEX {} }
+set ::IMEX::dataVar [file dirname [file normalize [info script]]]
+set ::IMEX::libVar ${::IMEX::dataVar}/libs
+
+catch { setDesignMode -bottomRoutingLayer 2 }
+catch { setDesignMode -topRoutingLayer 6 }
+catch { setAnalysisMode -analysisType onChipVariation }
+catch { setAnalysisMode -checkType setup }
+catch { setAnalysisMode -clkSrcPath true }
+catch { setAnalysisMode -clockPropagation sdcControl }
+catch { setAnalysisMode -skew true }
+catch { setAnalysisMode -usefulSkew true }
+catch { setOptMode -activeSetupViews { setup_view } }
+catch { setOptMode -autoSetupViews { setup_view} }
+catch { setOptMode -autoTDGRSetupViews { setup_view} }
+catch { setOptMode -deleteInst true }
+catch { setOptMode -drcMargin 0 }
+catch { setOptMode -fixDrc true }
+catch { setOptMode -ignorePathGroupsForHold {inp2reg reg2out reg2out feedthr} }
+catch { setOptMode -optimizeFF true }
+catch { setOptMode -setupTargetSlack 0 }
+catch { setPathGroupOptions default -effortLevel low }
+catch { setPathGroupOptions reg2out -effortLevel low }
+catch { setPathGroupOptions in2reg -effortLevel low }
+catch { setPathGroupOptions feedthr -effortLevel low }
+catch { setExtractRCMode  -engine postRoute -total_c_th 5 -relative_c_th 0.03 -coupling_c_th 3 }
+catch {setNanoRouteMode -quiet -drouteAntennaFactor 1.000000}
+catch {setNanoRouteMode -quiet -drouteEndIteration 40}
+catch {setNanoRouteMode -quiet -drouteFixAntenna true}
+catch {setNanoRouteMode -quiet -drouteMinSlackForWireOptimization 0.100000}
+catch {setNanoRouteMode -quiet -droutePostRouteSpreadWire "auto"}
+catch {setNanoRouteMode -quiet -drouteStartIteration 0}
+catch {setNanoRouteMode -quiet -drouteUseLefPinTaperRule true}
+catch {setNanoRouteMode -quiet -drouteUseMinSpacingForBlockage auto}
+catch {setNanoRouteMode -quiet -drouteUseMultiCutViaEffort "medium"}
+catch {setNanoRouteMode -quiet -extractDesignSignature 124046457}
+catch {setNanoRouteMode -quiet -extractRcModelFile "${::IMEX::libVar}/misc/rc_model.bin"}
+catch {setNanoRouteMode -quiet -extractThirdPartyCompatible false}
+catch {setNanoRouteMode -quiet -grouteExpTdStdDelay 4.400000}
+catch {setNanoRouteMode -quiet -grouteExpTdUseTifTimingEngineForImportDesign false}
+catch {setNanoRouteMode -quiet -routeStrictlyHonorNonDefaultRule "false"}
+catch {setNanoRouteMode -quiet -routeWithSiPostRouteFix false}
+catch {setNanoRouteMode -quiet -timingEngine ".timing_file_43158.tif.gz"}
+
+catch { setPlaceMode -enableDbSaveAreaPadding true }
+catch { setPlaceMode -place_detail_activity_power_driven false }
+catch { setPlaceMode -place_detail_eco_max_distance 10 }
+catch { setPlaceMode -place_detail_eco_priority_insts fixed }
+catch { setPlaceMode -place_detail_legalization_inst_gap 0 }
+catch { setPlaceMode -place_detail_wire_length_opt_effort high }
+catch { setPlaceMode -place_global_activity_power_driven false }
+catch { setPlaceMode -place_global_activity_power_driven_effort high }
+catch { setPlaceMode -place_global_auto_blockage_in_channel soft }
+catch { setPlaceMode -place_global_clock_gate_aware true }
+catch { setPlaceMode -place_global_clock_power_driven true }
+catch { setPlaceMode -place_global_clock_power_driven_effort low }
+catch { setPlaceMode -place_global_cong_effort low }
+catch { setPlaceMode -place_global_ignore_scan true }
+catch { setPlaceMode -place_global_max_density -1 }
+catch { setPlaceMode -place_global_place_io_pins true }
+catch { setPlaceMode -place_global_timing_effort high }
+catch { setPlaceMode -place_global_uniform_density true }
+catch { setIlmMode -keepHighFanoutPorts true -keepLoopBack false -keepInstInSdc false -keepFlatten true }
+catch { set_verify_drc_mode -check_only regular }
+catch { set_verify_drc_mode -limit 100000 }
+catch { set_verify_drc_mode -report /home/yukunw/dacs-lab3/experiment/dacs2024/lab3/results/26631dadda_bit16fb6545dd58885bf2431c21988dff9e3bddef7e0086f449065a0c1e66cdebbb80/innovus-rundir/reports/chipdone_drv.rpt }
+catch { setDelayCalMode -enable_high_fanout true }
+catch { setDelayCalMode -engine aae }
+catch { setDelayCalMode -ignoreNetLoad false }
+catch { setDelayCalMode -SIAware true }
+catch { setDelayCalMode -socv_accuracy_mode low }
+catch { setHierMode -disableArt false }
+catch { setHierMode -reportPostRouteArtTiming false }
+catch { setHierMode -trialRouteHonorReadOnly false }
+catch { setImportMode -discardFloatingVNets false }
+catch { setImportMode -keepEmptyModule true }
+catch { setSIMode -separate_delta_delay_on_data true }
+catch { setRouteMode -earlyGlobalRouteSecondPG false }
+catch { setFPlanMode -defaultTechSite asap7sc7p5t }
+catch { setFPlanMode -maxIoHeight false }
+catch { setFPlanMode -place_check_ignore_fixed_cell_list {} }
+catch { setFPlanMode -powerRailLayer {} }

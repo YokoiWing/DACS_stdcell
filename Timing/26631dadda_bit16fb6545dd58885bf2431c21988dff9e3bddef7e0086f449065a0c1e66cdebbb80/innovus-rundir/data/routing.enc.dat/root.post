@@ -1,0 +1,58 @@
+
+::db::check_and_set_root_attr extract_rc_engine post_route
+::db::check_and_set_root_attr check_drc_check_only regular
+::db::check_and_set_root_attr check_drc_limit 100000
+::db::check_and_set_root_attr check_drc_report ${::IMEX::libVar}/misc/chipdone_drv.rpt
+::db::check_and_set_root_attr delaycal_enable_high_fanout true
+::db::check_and_set_root_attr delaycal_ignore_net_load false
+::db::check_and_set_root_attr design_bottom_routing_layer 2
+::db::check_and_set_root_attr design_top_routing_layer 6
+::db::check_and_set_root_attr extract_design_signature 124046457
+::db::check_and_set_root_attr extract_rc_coupled true
+::db::check_and_set_root_attr extract_rc_model_file ${::IMEX::libVar}/misc/rc_model.bin
+::db::check_and_set_root_attr extract_rc_net_count_in_memory 100000
+::db::check_and_set_root_attr extract_rc_post_route_no_clean_rcdb true
+::db::check_and_set_root_attr floorplan_default_tech_site asap7sc7p5t
+::db::check_and_set_root_attr floorplan_max_io_height false
+::db::check_and_set_root_attr opt_delete_insts true
+::db::check_and_set_root_attr opt_drv_margin 0.0
+::db::check_and_set_root_attr opt_fix_drv true
+::db::check_and_set_root_attr opt_fix_hold_ignore_path_groups {inp2reg reg2out reg2out feedthr}
+::db::check_and_set_root_attr opt_hier_trial_route_honor_read_only false
+::db::check_and_set_root_attr opt_resize_flip_flops true
+::db::check_and_set_root_attr opt_setup_target_slack 0.0
+::db::check_and_set_root_attr opt_view_pruning_setup_views_active_list { setup_view }
+::db::check_and_set_root_attr opt_view_pruning_setup_views_persistent_list { setup_view}
+::db::check_and_set_root_attr opt_view_pruning_tdgr_setup_views_persistent_list { setup_view}
+::db::check_and_set_root_attr place_detail_activity_power_driven false
+::db::check_and_set_root_attr place_detail_eco_max_distance 10.0
+::db::check_and_set_root_attr place_detail_eco_priority_insts fixed
+::db::check_and_set_root_attr place_detail_legalization_inst_gap 0
+::db::check_and_set_root_attr place_detail_wire_length_opt_effort high
+::db::check_and_set_root_attr place_global_activity_power_driven false
+::db::check_and_set_root_attr place_global_activity_power_driven_effort high
+::db::check_and_set_root_attr place_global_auto_blockage_in_channel soft
+::db::check_and_set_root_attr place_global_clock_gate_aware true
+::db::check_and_set_root_attr place_global_clock_power_driven true
+::db::check_and_set_root_attr place_global_clock_power_driven_effort low
+::db::check_and_set_root_attr place_global_cong_effort low
+::db::check_and_set_root_attr place_global_ignore_scan true
+::db::check_and_set_root_attr place_global_max_density -1.0
+::db::check_and_set_root_attr place_global_place_io_pins true
+::db::check_and_set_root_attr place_global_timing_effort high
+::db::check_and_set_root_attr place_global_uniform_density true
+::db::check_and_set_root_attr route_design_detail_antenna_factor 1.0
+::db::check_and_set_root_attr route_design_detail_end_iteration 40
+::db::check_and_set_root_attr route_design_detail_fix_antenna true
+::db::check_and_set_root_attr route_design_detail_min_slack_for_opt_wire 0.1
+::db::check_and_set_root_attr route_design_detail_post_route_spread_wire auto
+::db::check_and_set_root_attr route_design_detail_use_lef_pin_taper_rule true
+::db::check_and_set_root_attr route_design_detail_use_min_spacing_for_blockage auto
+::db::check_and_set_root_attr route_design_detail_use_multi_cut_via_effort medium
+::db::check_and_set_root_attr route_design_extract_third_party_compatible false
+::db::check_and_set_root_attr route_design_global_exp_timing_driven_std_delay 4.4
+::db::check_and_set_root_attr route_design_global_exp_timing_driven_use_tif_timing_engine_for_import_design false
+::db::check_and_set_root_attr route_design_strict_honor_route_rule false
+::db::check_and_set_root_attr route_design_with_si_post_route_fix false
+::db::check_and_set_root_attr route_early_global_secondary_pg false
+::db::check_and_set_root_attr write_def_stream_check_uncolored false
