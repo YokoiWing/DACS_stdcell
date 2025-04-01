@@ -1,0 +1,2057 @@
+Cadence Genus(TM) Synthesis Solution.
+Copyright 2019 Cadence Design Systems, Inc. All rights reserved worldwide.
+Cadence and the Cadence logo are registered trademarks and Genus is a trademark
+of Cadence Design Systems, Inc. in the United States and other countries.
+
+Version: 19.12-s121_1, built Mon Dec 02 23:07:17 PST 2019
+Options: -no_gui -abort_on_error -overwrite -files /home/yukunw/dacs-lab3/experiment/dacs2024/lab3/results/26631dadda_bit16fb6545dd58885bf2431c21988dff9e3bddef7e0086f449065a0c1e66cdebbb80/genus-rundir/scripts/fused_syn.tcl -log /home/yukunw/dacs-lab3/experiment/dacs2024/lab3/results/26631dadda_bit16fb6545dd58885bf2431c21988dff9e3bddef7e0086f449065a0c1e66cdebbb80/genus-rundir/log/fused 
+Date:    Tue Apr 01 15:33:32 2025
+Host:    hpc001 (x86_64 w/Linux 3.10.0-1160.el7.x86_64) (24cores*96cpus*2physical cpus*Intel(R) Xeon(R) Gold 6342 CPU @ 2.80GHz 36864KB) (1584529976KB)
+PID:     42117
+OS:      CentOS Linux release 7.9.2009 (Core)
+
+Checking out license: Genus_Synthesis
+
+Loading tool scripts...
+
+Finished loading tool scripts (4 seconds elapsed).
+
+#@ Processing -files option
+@genus 1> source /home/yukunw/dacs-lab3/experiment/dacs2024/lab3/results/26631dadda_bit16fb6545dd58885bf2431c21988dff9e3bddef7e0086f449065a0c1e66cdebbb80/genus-rundir/scripts/fused_syn.tcl
+#@ Begin verbose source home/yukunw/dacs-lab3/experiment/dacs2024/lab3/results/26631dadda_bit16fb6545dd58885bf2431c21988dff9e3bddef7e0086f449065a0c1e66cdebbb80/genus-rundir/scripts/fused_syn.tcl
+@file(fused_syn.tcl) 5: set_db hdl_error_on_blackbox true
+  Setting attribute of root '/': 'hdl_error_on_blackbox' = true
+@file(fused_syn.tcl) 6: set_db max_cpus_per_server 1
+  Setting attribute of root '/': 'max_cpus_per_server' = 1
+@file(fused_syn.tcl) 11: read_mmmc /home/yukunw/dacs-lab3/experiment/dacs2024/lab3/results/26631dadda_bit16fb6545dd58885bf2431c21988dff9e3bddef7e0086f449065a0c1e66cdebbb80/genus-rundir/scripts/mmmc.tcl
+Sourcing '/home/yukunw/dacs-lab3/experiment/dacs2024/lab3/results/26631dadda_bit16fb6545dd58885bf2431c21988dff9e3bddef7e0086f449065a0c1e66cdebbb80/genus-rundir/scripts/mmmc.tcl' (Tue Apr 01 15:33:36 CST 2025)...
+#@ Begin verbose source home/yukunw/dacs-lab3/experiment/dacs2024/lab3/results/26631dadda_bit16fb6545dd58885bf2431c21988dff9e3bddef7e0086f449065a0c1e66cdebbb80/genus-rundir/scripts/mmmc.tcl
+@file(mmmc.tcl) 5: create_constraint_mode -name common -sdc_files /home/yukunw/dacs-lab3/experiment/dacs2024/lab3/results/26631dadda_bit16fb6545dd58885bf2431c21988dff9e3bddef7e0086f449065a0c1e66cdebbb80/genus-rundir/scripts/constraint.sdc
+@file(mmmc.tcl) 10: create_library_set -name setup_set -timing [list /home/yukunw/asap7-ry/asap7sc7p5t_27/LIB/NLDM/asap7sc7p5t_AO_RVT_TT_nldm_201020.lib.gz /home/yukunw/asap7-ry/asap7sc7p5t_27/LIB/NLDM/asap7sc7p5t_AO_LVT_TT_nldm_201020.lib.gz /home/yukunw/asap7-ry/asap7sc7p5t_27/LIB/NLDM/asap7sc7p5t_AO_SLVT_TT_nldm_201020.lib.gz /home/yukunw/asap7-ry/asap7sc7p5t_27/LIB/NLDM/asap7sc7p5t_AO_SRAM_TT_nldm_201020.lib.gz /home/yukunw/asap7-ry/asap7sc7p5t_27/LIB/NLDM/asap7sc7p5t_INVBUF_LVT_TT_nldm_201020.lib.gz /home/yukunw/asap7-ry/asap7sc7p5t_27/LIB/NLDM/asap7sc7p5t_INVBUF_RVT_TT_nldm_201020.lib.gz /home/yukunw/asap7-ry/asap7sc7p5t_27/LIB/NLDM/asap7sc7p5t_INVBUF_SLVT_TT_nldm_201020.lib.gz /home/yukunw/asap7-ry/asap7sc7p5t_27/LIB/NLDM/asap7sc7p5t_INVBUF_SRAM_TT_nldm_201020.lib.gz /home/yukunw/asap7-ry/asap7sc7p5t_27/LIB/NLDM/asap7sc7p5t_OA_LVT_TT_nldm_201020.lib.gz /home/yukunw/asap7-ry/asap7sc7p5t_27/LIB/NLDM/asap7sc7p5t_OA_RVT_TT_nldm_201020.lib.gz /home/yukunw/asap7-ry/asap7sc7p5t_27/LIB/NLDM/asap7sc7p5t_OA_SLVT_TT_nldm_201020.lib.gz /home/yukunw/asap7-ry/asap7sc7p5t_27/LIB/NLDM/asap7sc7p5t_OA_SRAM_TT_nldm_201020.lib.gz /home/yukunw/asap7-ry/asap7sc7p5t_27/LIB/NLDM/asap7sc7p5t_SEQ_LVT_TT_nldm_201020.lib.gz /home/yukunw/asap7-ry/asap7sc7p5t_27/LIB/NLDM/asap7sc7p5t_SEQ_RVT_TT_nldm_201020.lib.gz /home/yukunw/asap7-ry/asap7sc7p5t_27/LIB/NLDM/asap7sc7p5t_SEQ_SLVT_TT_nldm_201020.lib.gz /home/yukunw/asap7-ry/asap7sc7p5t_27/LIB/NLDM/asap7sc7p5t_SEQ_SRAM_TT_nldm_201020.lib.gz /home/yukunw/asap7-ry/asap7sc7p5t_27/LIB/NLDM/asap7sc7p5t_SIMPLE_LVT_TT_nldm_201020.lib.gz /home/yukunw/asap7-ry/asap7sc7p5t_27/LIB/NLDM/asap7sc7p5t_SIMPLE_RVT_TT_nldm_201020.lib.gz /home/yukunw/asap7-ry/asap7sc7p5t_27/LIB/NLDM/asap7sc7p5t_SIMPLE_SLVT_TT_nldm_201020.lib.gz /home/yukunw/asap7-ry/asap7sc7p5t_27/LIB/NLDM/asap7sc7p5t_SIMPLE_SRAM_TT_nldm_201020.lib.gz]
+@file(mmmc.tcl) 11: create_library_set -name hold_set -timing [list /home/yukunw/asap7-ry/asap7sc7p5t_27/LIB/NLDM/asap7sc7p5t_AO_RVT_TT_nldm_201020.lib.gz /home/yukunw/asap7-ry/asap7sc7p5t_27/LIB/NLDM/asap7sc7p5t_AO_LVT_TT_nldm_201020.lib.gz /home/yukunw/asap7-ry/asap7sc7p5t_27/LIB/NLDM/asap7sc7p5t_AO_SLVT_TT_nldm_201020.lib.gz /home/yukunw/asap7-ry/asap7sc7p5t_27/LIB/NLDM/asap7sc7p5t_AO_SRAM_TT_nldm_201020.lib.gz /home/yukunw/asap7-ry/asap7sc7p5t_27/LIB/NLDM/asap7sc7p5t_INVBUF_LVT_TT_nldm_201020.lib.gz /home/yukunw/asap7-ry/asap7sc7p5t_27/LIB/NLDM/asap7sc7p5t_INVBUF_RVT_TT_nldm_201020.lib.gz /home/yukunw/asap7-ry/asap7sc7p5t_27/LIB/NLDM/asap7sc7p5t_INVBUF_SLVT_TT_nldm_201020.lib.gz /home/yukunw/asap7-ry/asap7sc7p5t_27/LIB/NLDM/asap7sc7p5t_INVBUF_SRAM_TT_nldm_201020.lib.gz /home/yukunw/asap7-ry/asap7sc7p5t_27/LIB/NLDM/asap7sc7p5t_OA_LVT_TT_nldm_201020.lib.gz /home/yukunw/asap7-ry/asap7sc7p5t_27/LIB/NLDM/asap7sc7p5t_OA_RVT_TT_nldm_201020.lib.gz /home/yukunw/asap7-ry/asap7sc7p5t_27/LIB/NLDM/asap7sc7p5t_OA_SLVT_TT_nldm_201020.lib.gz /home/yukunw/asap7-ry/asap7sc7p5t_27/LIB/NLDM/asap7sc7p5t_OA_SRAM_TT_nldm_201020.lib.gz /home/yukunw/asap7-ry/asap7sc7p5t_27/LIB/NLDM/asap7sc7p5t_SEQ_LVT_TT_nldm_201020.lib.gz /home/yukunw/asap7-ry/asap7sc7p5t_27/LIB/NLDM/asap7sc7p5t_SEQ_RVT_TT_nldm_201020.lib.gz /home/yukunw/asap7-ry/asap7sc7p5t_27/LIB/NLDM/asap7sc7p5t_SEQ_SLVT_TT_nldm_201020.lib.gz /home/yukunw/asap7-ry/asap7sc7p5t_27/LIB/NLDM/asap7sc7p5t_SEQ_SRAM_TT_nldm_201020.lib.gz /home/yukunw/asap7-ry/asap7sc7p5t_27/LIB/NLDM/asap7sc7p5t_SIMPLE_LVT_TT_nldm_201020.lib.gz /home/yukunw/asap7-ry/asap7sc7p5t_27/LIB/NLDM/asap7sc7p5t_SIMPLE_RVT_TT_nldm_201020.lib.gz /home/yukunw/asap7-ry/asap7sc7p5t_27/LIB/NLDM/asap7sc7p5t_SIMPLE_SLVT_TT_nldm_201020.lib.gz /home/yukunw/asap7-ry/asap7sc7p5t_27/LIB/NLDM/asap7sc7p5t_SIMPLE_SRAM_TT_nldm_201020.lib.gz]
+@file(mmmc.tcl) 16: create_timing_condition -name setup_cond -library_sets [list setup_set]
+@file(mmmc.tcl) 17: create_timing_condition -name hold_cond -library_sets [list hold_set]
+@file(mmmc.tcl) 22: create_rc_corner -name rc_corner -qrc_tech [list /home/yukunw/asap7-ry/asap7sc7p5t_27/qrc/qrcTechFile_typ03_scaled4xV06]
+@file(mmmc.tcl) 27: create_delay_corner -name setup_delay -timing_condition setup_cond -rc_corner rc_corner
+@file(mmmc.tcl) 28: create_delay_corner -name hold_delay -timing_condition hold_cond -rc_corner rc_corner
+@file(mmmc.tcl) 33: create_analysis_view -name setup_view -delay_corner setup_delay -constraint_mode common
+@file(mmmc.tcl) 34: create_analysis_view -name hold_view -delay_corner hold_delay -constraint_mode common
+@file(mmmc.tcl) 39: set_analysis_view -setup { setup_view } -hold { hold_view }
+Warning : Missing sequential block in the sequential cell. [LBR-526]
+        : Sequential block (ff/ff_bank/latch/latch_bank) missing in cell(s) 'ICGx1_ASAP7_75t_L'. This may cause potential problems with results of downstream tools (File /home/yukunw/asap7-ry/asap7sc7p5t_27/LIB/NLDM/asap7sc7p5t_SEQ_LVT_TT_nldm_201020.lib.gz)
+Warning : Missing sequential block in the sequential cell. [LBR-526]
+        : Sequential block (ff/ff_bank/latch/latch_bank) missing in cell(s) 'ICGx2_ASAP7_75t_L'. This may cause potential problems with results of downstream tools (File /home/yukunw/asap7-ry/asap7sc7p5t_27/LIB/NLDM/asap7sc7p5t_SEQ_LVT_TT_nldm_201020.lib.gz)
+Warning : Missing sequential block in the sequential cell. [LBR-526]
+        : Sequential block (ff/ff_bank/latch/latch_bank) missing in cell(s) 'ICGx2p67DC_ASAP7_75t_L'. This may cause potential problems with results of downstream tools (File /home/yukunw/asap7-ry/asap7sc7p5t_27/LIB/NLDM/asap7sc7p5t_SEQ_LVT_TT_nldm_201020.lib.gz)
+Warning : Missing sequential block in the sequential cell. [LBR-526]
+        : Sequential block (ff/ff_bank/latch/latch_bank) missing in cell(s) 'ICGx3_ASAP7_75t_L'. This may cause potential problems with results of downstream tools (File /home/yukunw/asap7-ry/asap7sc7p5t_27/LIB/NLDM/asap7sc7p5t_SEQ_LVT_TT_nldm_201020.lib.gz)
+Warning : Missing sequential block in the sequential cell. [LBR-526]
+        : Sequential block (ff/ff_bank/latch/latch_bank) missing in cell(s) 'ICGx4DC_ASAP7_75t_L'. This may cause potential problems with results of downstream tools (File /home/yukunw/asap7-ry/asap7sc7p5t_27/LIB/NLDM/asap7sc7p5t_SEQ_LVT_TT_nldm_201020.lib.gz)
+Warning : Missing sequential block in the sequential cell. [LBR-526]
+        : Sequential block (ff/ff_bank/latch/latch_bank) missing in cell(s) 'ICGx4_ASAP7_75t_L'. This may cause potential problems with results of downstream tools (File /home/yukunw/asap7-ry/asap7sc7p5t_27/LIB/NLDM/asap7sc7p5t_SEQ_LVT_TT_nldm_201020.lib.gz)
+Warning : Missing sequential block in the sequential cell. [LBR-526]
+        : Sequential block (ff/ff_bank/latch/latch_bank) missing in cell(s) 'ICGx5_ASAP7_75t_L'. This may cause potential problems with results of downstream tools (File /home/yukunw/asap7-ry/asap7sc7p5t_27/LIB/NLDM/asap7sc7p5t_SEQ_LVT_TT_nldm_201020.lib.gz)
+Warning : Missing sequential block in the sequential cell. [LBR-526]
+        : Sequential block (ff/ff_bank/latch/latch_bank) missing in cell(s) 'ICGx5p33DC_ASAP7_75t_L'. This may cause potential problems with results of downstream tools (File /home/yukunw/asap7-ry/asap7sc7p5t_27/LIB/NLDM/asap7sc7p5t_SEQ_LVT_TT_nldm_201020.lib.gz)
+Warning : Missing sequential block in the sequential cell. [LBR-526]
+        : Sequential block (ff/ff_bank/latch/latch_bank) missing in cell(s) 'ICGx6p67DC_ASAP7_75t_L'. This may cause potential problems with results of downstream tools (File /home/yukunw/asap7-ry/asap7sc7p5t_27/LIB/NLDM/asap7sc7p5t_SEQ_LVT_TT_nldm_201020.lib.gz)
+Warning : Missing sequential block in the sequential cell. [LBR-526]
+        : Sequential block (ff/ff_bank/latch/latch_bank) missing in cell(s) 'ICGx8DC_ASAP7_75t_L'. This may cause potential problems with results of downstream tools (File /home/yukunw/asap7-ry/asap7sc7p5t_27/LIB/NLDM/asap7sc7p5t_SEQ_LVT_TT_nldm_201020.lib.gz)
+Warning : Missing sequential block in the sequential cell. [LBR-526]
+        : Sequential block (ff/ff_bank/latch/latch_bank) missing in cell(s) 'ICGx1_ASAP7_75t_R'. This may cause potential problems with results of downstream tools (File /home/yukunw/asap7-ry/asap7sc7p5t_27/LIB/NLDM/asap7sc7p5t_SEQ_RVT_TT_nldm_201020.lib.gz)
+Warning : Missing sequential block in the sequential cell. [LBR-526]
+        : Sequential block (ff/ff_bank/latch/latch_bank) missing in cell(s) 'ICGx2_ASAP7_75t_R'. This may cause potential problems with results of downstream tools (File /home/yukunw/asap7-ry/asap7sc7p5t_27/LIB/NLDM/asap7sc7p5t_SEQ_RVT_TT_nldm_201020.lib.gz)
+Warning : Missing sequential block in the sequential cell. [LBR-526]
+        : Sequential block (ff/ff_bank/latch/latch_bank) missing in cell(s) 'ICGx2p67DC_ASAP7_75t_R'. This may cause potential problems with results of downstream tools (File /home/yukunw/asap7-ry/asap7sc7p5t_27/LIB/NLDM/asap7sc7p5t_SEQ_RVT_TT_nldm_201020.lib.gz)
+Warning : Missing sequential block in the sequential cell. [LBR-526]
+        : Sequential block (ff/ff_bank/latch/latch_bank) missing in cell(s) 'ICGx3_ASAP7_75t_R'. This may cause potential problems with results of downstream tools (File /home/yukunw/asap7-ry/asap7sc7p5t_27/LIB/NLDM/asap7sc7p5t_SEQ_RVT_TT_nldm_201020.lib.gz)
+Warning : Missing sequential block in the sequential cell. [LBR-526]
+        : Sequential block (ff/ff_bank/latch/latch_bank) missing in cell(s) 'ICGx4DC_ASAP7_75t_R'. This may cause potential problems with results of downstream tools (File /home/yukunw/asap7-ry/asap7sc7p5t_27/LIB/NLDM/asap7sc7p5t_SEQ_RVT_TT_nldm_201020.lib.gz)
+Warning : Missing sequential block in the sequential cell. [LBR-526]
+        : Sequential block (ff/ff_bank/latch/latch_bank) missing in cell(s) 'ICGx4_ASAP7_75t_R'. This may cause potential problems with results of downstream tools (File /home/yukunw/asap7-ry/asap7sc7p5t_27/LIB/NLDM/asap7sc7p5t_SEQ_RVT_TT_nldm_201020.lib.gz)
+Warning : Missing sequential block in the sequential cell. [LBR-526]
+        : Sequential block (ff/ff_bank/latch/latch_bank) missing in cell(s) 'ICGx5_ASAP7_75t_R'. This may cause potential problems with results of downstream tools (File /home/yukunw/asap7-ry/asap7sc7p5t_27/LIB/NLDM/asap7sc7p5t_SEQ_RVT_TT_nldm_201020.lib.gz)
+Warning : Missing sequential block in the sequential cell. [LBR-526]
+        : Sequential block (ff/ff_bank/latch/latch_bank) missing in cell(s) 'ICGx5p33DC_ASAP7_75t_R'. This may cause potential problems with results of downstream tools (File /home/yukunw/asap7-ry/asap7sc7p5t_27/LIB/NLDM/asap7sc7p5t_SEQ_RVT_TT_nldm_201020.lib.gz)
+Warning : Missing sequential block in the sequential cell. [LBR-526]
+        : Sequential block (ff/ff_bank/latch/latch_bank) missing in cell(s) 'ICGx6p67DC_ASAP7_75t_R'. This may cause potential problems with results of downstream tools (File /home/yukunw/asap7-ry/asap7sc7p5t_27/LIB/NLDM/asap7sc7p5t_SEQ_RVT_TT_nldm_201020.lib.gz)
+Warning : Missing sequential block in the sequential cell. [LBR-526]
+        : Sequential block (ff/ff_bank/latch/latch_bank) missing in cell(s) 'ICGx8DC_ASAP7_75t_R'. This may cause potential problems with results of downstream tools (File /home/yukunw/asap7-ry/asap7sc7p5t_27/LIB/NLDM/asap7sc7p5t_SEQ_RVT_TT_nldm_201020.lib.gz)
+
+  Message Summary for Library all 20 libraries:
+  *********************************************
+  Missing sequential block in the sequential cell. [LBR-526]: 40
+  *********************************************
+ 
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 0.700000, 25.000000) in library 'asap7sc7p5t_AO_RVT_TT_nldm_201020.lib.gz'.
+        : The nominal operating condition is represented, either by the nominal PVT values specified in the library source (via nom_process,nom_voltage and nom_temperature respectively), or by the default PVT values (1.0,1.0,1.0).
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 0.700000, 25.000000) in library 'asap7sc7p5t_AO_LVT_TT_nldm_201020.lib.gz'.
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 0.700000, 25.000000) in library 'asap7sc7p5t_AO_SLVT_TT_nldm_201020.lib.gz'.
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 0.700000, 25.000000) in library 'asap7sc7p5t_AO_SRAM_TT_nldm_201020.lib.gz'.
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 0.700000, 25.000000) in library 'asap7sc7p5t_INVBUF_LVT_TT_nldm_201020.lib.gz'.
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 0.700000, 25.000000) in library 'asap7sc7p5t_INVBUF_RVT_TT_nldm_201020.lib.gz'.
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 0.700000, 25.000000) in library 'asap7sc7p5t_INVBUF_SLVT_TT_nldm_201020.lib.gz'.
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 0.700000, 25.000000) in library 'asap7sc7p5t_INVBUF_SRAM_TT_nldm_201020.lib.gz'.
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 0.700000, 25.000000) in library 'asap7sc7p5t_OA_LVT_TT_nldm_201020.lib.gz'.
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 0.700000, 25.000000) in library 'asap7sc7p5t_OA_RVT_TT_nldm_201020.lib.gz'.
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 0.700000, 25.000000) in library 'asap7sc7p5t_OA_SLVT_TT_nldm_201020.lib.gz'.
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 0.700000, 25.000000) in library 'asap7sc7p5t_OA_SRAM_TT_nldm_201020.lib.gz'.
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 0.700000, 25.000000) in library 'asap7sc7p5t_SEQ_LVT_TT_nldm_201020.lib.gz'.
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 0.700000, 25.000000) in library 'asap7sc7p5t_SEQ_RVT_TT_nldm_201020.lib.gz'.
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 0.700000, 25.000000) in library 'asap7sc7p5t_SEQ_SLVT_TT_nldm_201020.lib.gz'.
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 0.700000, 25.000000) in library 'asap7sc7p5t_SEQ_SRAM_TT_nldm_201020.lib.gz'.
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 0.700000, 25.000000) in library 'asap7sc7p5t_SIMPLE_LVT_TT_nldm_201020.lib.gz'.
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 0.700000, 25.000000) in library 'asap7sc7p5t_SIMPLE_RVT_TT_nldm_201020.lib.gz'.
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 0.700000, 25.000000) in library 'asap7sc7p5t_SIMPLE_SLVT_TT_nldm_201020.lib.gz'.
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 0.700000, 25.000000) in library 'asap7sc7p5t_SIMPLE_SRAM_TT_nldm_201020.lib.gz'.
+Warning : The clock gating integrated cell is not usable. [LBR-103]
+        : The 'clock_gating_integrated_cell' attribute 'latch_posedge_precontrol' does not match with inferred definition 'none_negedge_control' for  clock gating cell 'ICGx1_ASAP7_75t_L'.
+        : The 'clock_gating_integrated_cell' attribute and state table or latch group definition for the clock gating integrated cell is not matching.
+Warning : The clock gating integrated cell is not usable. [LBR-103]
+        : The 'clock_gating_integrated_cell' attribute 'latch_posedge_precontrol' does not match with inferred definition 'none_negedge_control' for  clock gating cell 'ICGx2_ASAP7_75t_L'.
+Warning : The clock gating integrated cell is not usable. [LBR-103]
+        : The 'clock_gating_integrated_cell' attribute 'latch_posedge_precontrol' does not match with inferred definition 'none_negedge_control' for  clock gating cell 'ICGx2p67DC_ASAP7_75t_L'.
+Warning : The clock gating integrated cell is not usable. [LBR-103]
+        : The 'clock_gating_integrated_cell' attribute 'latch_posedge_precontrol' does not match with inferred definition 'none_negedge_control' for  clock gating cell 'ICGx3_ASAP7_75t_L'.
+Warning : The clock gating integrated cell is not usable. [LBR-103]
+        : The 'clock_gating_integrated_cell' attribute 'latch_posedge_precontrol' does not match with inferred definition 'none_negedge_control' for  clock gating cell 'ICGx4DC_ASAP7_75t_L'.
+Warning : The clock gating integrated cell is not usable. [LBR-103]
+        : The 'clock_gating_integrated_cell' attribute 'latch_posedge_precontrol' does not match with inferred definition 'none_negedge_control' for  clock gating cell 'ICGx4_ASAP7_75t_L'.
+Warning : The clock gating integrated cell is not usable. [LBR-103]
+        : The 'clock_gating_integrated_cell' attribute 'latch_posedge_precontrol' does not match with inferred definition 'none_negedge_control' for  clock gating cell 'ICGx5_ASAP7_75t_L'.
+Warning : The clock gating integrated cell is not usable. [LBR-103]
+        : The 'clock_gating_integrated_cell' attribute 'latch_posedge_precontrol' does not match with inferred definition 'none_negedge_control' for  clock gating cell 'ICGx5p33DC_ASAP7_75t_L'.
+Warning : The clock gating integrated cell is not usable. [LBR-103]
+        : The 'clock_gating_integrated_cell' attribute 'latch_posedge_precontrol' does not match with inferred definition 'none_negedge_control' for  clock gating cell 'ICGx6p67DC_ASAP7_75t_L'.
+Warning : The clock gating integrated cell is not usable. [LBR-103]
+        : The 'clock_gating_integrated_cell' attribute 'latch_posedge_precontrol' does not match with inferred definition 'none_negedge_control' for  clock gating cell 'ICGx8DC_ASAP7_75t_L'.
+Warning : The clock gating integrated cell is not usable. [LBR-103]
+        : The 'clock_gating_integrated_cell' attribute 'latch_posedge_precontrol' does not match with inferred definition 'none_negedge_control' for  clock gating cell 'ICGx1_ASAP7_75t_R'.
+Warning : The clock gating integrated cell is not usable. [LBR-103]
+        : The 'clock_gating_integrated_cell' attribute 'latch_posedge_precontrol' does not match with inferred definition 'none_negedge_control' for  clock gating cell 'ICGx2_ASAP7_75t_R'.
+Warning : The clock gating integrated cell is not usable. [LBR-103]
+        : The 'clock_gating_integrated_cell' attribute 'latch_posedge_precontrol' does not match with inferred definition 'none_negedge_control' for  clock gating cell 'ICGx2p67DC_ASAP7_75t_R'.
+Warning : The clock gating integrated cell is not usable. [LBR-103]
+        : The 'clock_gating_integrated_cell' attribute 'latch_posedge_precontrol' does not match with inferred definition 'none_negedge_control' for  clock gating cell 'ICGx3_ASAP7_75t_R'.
+Warning : The clock gating integrated cell is not usable. [LBR-103]
+        : The 'clock_gating_integrated_cell' attribute 'latch_posedge_precontrol' does not match with inferred definition 'none_negedge_control' for  clock gating cell 'ICGx4DC_ASAP7_75t_R'.
+Warning : The clock gating integrated cell is not usable. [LBR-103]
+        : The 'clock_gating_integrated_cell' attribute 'latch_posedge_precontrol' does not match with inferred definition 'none_negedge_control' for  clock gating cell 'ICGx4_ASAP7_75t_R'.
+Warning : The clock gating integrated cell is not usable. [LBR-103]
+        : The 'clock_gating_integrated_cell' attribute 'latch_posedge_precontrol' does not match with inferred definition 'none_negedge_control' for  clock gating cell 'ICGx5_ASAP7_75t_R'.
+Warning : The clock gating integrated cell is not usable. [LBR-103]
+        : The 'clock_gating_integrated_cell' attribute 'latch_posedge_precontrol' does not match with inferred definition 'none_negedge_control' for  clock gating cell 'ICGx5p33DC_ASAP7_75t_R'.
+Warning : The clock gating integrated cell is not usable. [LBR-103]
+        : The 'clock_gating_integrated_cell' attribute 'latch_posedge_precontrol' does not match with inferred definition 'none_negedge_control' for  clock gating cell 'ICGx6p67DC_ASAP7_75t_R'.
+Warning : The clock gating integrated cell is not usable. [LBR-103]
+        : The 'clock_gating_integrated_cell' attribute 'latch_posedge_precontrol' does not match with inferred definition 'none_negedge_control' for  clock gating cell 'ICGx8DC_ASAP7_75t_R'.
+Warning : Libcell has no area attribute.  Defaulting to 0 area. [LBR-43]
+        : Assigning 0 area to library cell 'asap7sc7p5t_INVBUF_RVT_TT_nldm_201020/CKINVDCx10_ASAP7_75t_R'.
+        : Specify a valid area value for the libcell.
+Warning : Libcell has no area attribute.  Defaulting to 0 area. [LBR-43]
+        : Assigning 0 area to library cell 'asap7sc7p5t_INVBUF_RVT_TT_nldm_201020/CKINVDCx11_ASAP7_75t_R'.
+Warning : Libcell has no area attribute.  Defaulting to 0 area. [LBR-43]
+        : Assigning 0 area to library cell 'asap7sc7p5t_INVBUF_RVT_TT_nldm_201020/CKINVDCx12_ASAP7_75t_R'.
+Warning : Libcell has no area attribute.  Defaulting to 0 area. [LBR-43]
+        : Assigning 0 area to library cell 'asap7sc7p5t_INVBUF_RVT_TT_nldm_201020/CKINVDCx14_ASAP7_75t_R'.
+Warning : Libcell has no area attribute.  Defaulting to 0 area. [LBR-43]
+        : Assigning 0 area to library cell 'asap7sc7p5t_INVBUF_RVT_TT_nldm_201020/CKINVDCx16_ASAP7_75t_R'.
+Warning : Libcell has no area attribute.  Defaulting to 0 area. [LBR-43]
+        : Assigning 0 area to library cell 'asap7sc7p5t_INVBUF_RVT_TT_nldm_201020/CKINVDCx20_ASAP7_75t_R'.
+Warning : Libcell has no area attribute.  Defaulting to 0 area. [LBR-43]
+        : Assigning 0 area to library cell 'asap7sc7p5t_INVBUF_RVT_TT_nldm_201020/CKINVDCx5p33_ASAP7_75t_R'.
+Warning : Libcell has no area attribute.  Defaulting to 0 area. [LBR-43]
+        : Assigning 0 area to library cell 'asap7sc7p5t_INVBUF_RVT_TT_nldm_201020/CKINVDCx6p67_ASAP7_75t_R'.
+Warning : Libcell has no area attribute.  Defaulting to 0 area. [LBR-43]
+        : Assigning 0 area to library cell 'asap7sc7p5t_INVBUF_RVT_TT_nldm_201020/CKINVDCx8_ASAP7_75t_R'.
+Warning : Libcell has no area attribute.  Defaulting to 0 area. [LBR-43]
+        : Assigning 0 area to library cell 'asap7sc7p5t_INVBUF_RVT_TT_nldm_201020/CKINVDCx9p33_ASAP7_75t_R'.
+Info    : Set default library domain. [LBR-109]
+        : The default library domain is 'library_domain:setup_cond'.
+#@ End verbose source home/yukunw/dacs-lab3/experiment/dacs2024/lab3/results/26631dadda_bit16fb6545dd58885bf2431c21988dff9e3bddef7e0086f449065a0c1e66cdebbb80/genus-rundir/scripts/mmmc.tcl
+@file(fused_syn.tcl) 12: read_physical -lef { /home/yukunw/asap7-ry/asap7sc7p5t_27/techlef_misc/asap7_tech_4x_201209.lef /home/yukunw/asap7-ry/asap7sc7p5t_27/LEF/scaled/asap7sc7p5t_27_L_4x_201211.lef /home/yukunw/asap7-ry/asap7sc7p5t_27/LEF/scaled/asap7sc7p5t_27_R_4x_201211.lef /home/yukunw/asap7-ry/asap7sc7p5t_27/LEF/scaled/asap7sc7p5t_27_SL_4x_201211.lef /home/yukunw/asap7-ry/asap7sc7p5t_27/LEF/scaled/asap7sc7p5t_27_SRAM_4x_201211.lef }
+Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+        : Via 'VIA9Pad' has no resistance value.
+        : If this is the expected behavior, this message can be ignored.
+Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+        : Via 'VIA89' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+        : Via 'VIA78' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+        : Via 'VIA67' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+        : Via 'VIA56' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+        : Via 'VIA45' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+        : Via 'VIA34' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+        : Via 'VIA23' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+        : Via 'VIA12' has no resistance value.
+Warning : Site already defined before, duplicated site will be ignored. [PHYS-106]
+        : Site 'asap7sc7p5t' read already, this site in file '/home/yukunw/asap7-ry/asap7sc7p5t_27/LEF/scaled/asap7sc7p5t_27_R_4x_201211.lef' is ignored.
+Warning : Site already defined before, duplicated site will be ignored. [PHYS-106]
+        : Site 'asap7sc7p5t' read already, this site in file '/home/yukunw/asap7-ry/asap7sc7p5t_27/LEF/scaled/asap7sc7p5t_27_SL_4x_201211.lef' is ignored.
+Warning : Site already defined before, duplicated site will be ignored. [PHYS-106]
+        : Site 'asap7sc7p5t' read already, this site in file '/home/yukunw/asap7-ry/asap7sc7p5t_27/LEF/scaled/asap7sc7p5t_27_SRAM_4x_201211.lef' is ignored.
+
+  According to lef_library, there are total 10 routing layers [ V(5) / H(5) ]
+
+Warning : Missing wire parameter. [PHYS-15]
+        : 'EDGECAPACITANCE' parameter is missing for layer 'M1' [line 100 in file /home/yukunw/asap7-ry/asap7sc7p5t_27/techlef_misc/asap7_tech_4x_201209.lef]
+        : Check the wire parameter in LEF technology files.
+Warning : Missing wire parameter. [PHYS-15]
+        : 'EDGECAPACITANCE' parameter is missing for layer 'M2' [line 165 in file /home/yukunw/asap7-ry/asap7sc7p5t_27/techlef_misc/asap7_tech_4x_201209.lef]
+Warning : Missing wire parameter. [PHYS-15]
+        : 'EDGECAPACITANCE' parameter is missing for layer 'M3' [line 216 in file /home/yukunw/asap7-ry/asap7sc7p5t_27/techlef_misc/asap7_tech_4x_201209.lef]
+Warning : Missing wire parameter. [PHYS-15]
+        : 'EDGECAPACITANCE' parameter is missing for layer 'M4' [line 296 in file /home/yukunw/asap7-ry/asap7sc7p5t_27/techlef_misc/asap7_tech_4x_201209.lef]
+Warning : Missing wire parameter. [PHYS-15]
+        : 'EDGECAPACITANCE' parameter is missing for layer 'M5' [line 381 in file /home/yukunw/asap7-ry/asap7sc7p5t_27/techlef_misc/asap7_tech_4x_201209.lef]
+Warning : Missing wire parameter. [PHYS-15]
+        : 'EDGECAPACITANCE' parameter is missing for layer 'M6' [line 462 in file /home/yukunw/asap7-ry/asap7sc7p5t_27/techlef_misc/asap7_tech_4x_201209.lef]
+Warning : Missing wire parameter. [PHYS-15]
+        : 'EDGECAPACITANCE' parameter is missing for layer 'M7' [line 538 in file /home/yukunw/asap7-ry/asap7sc7p5t_27/techlef_misc/asap7_tech_4x_201209.lef]
+Warning : Missing wire parameter. [PHYS-15]
+        : 'EDGECAPACITANCE' parameter is missing for layer 'M8' [line 566 in file /home/yukunw/asap7-ry/asap7sc7p5t_27/techlef_misc/asap7_tech_4x_201209.lef]
+Warning : Missing wire parameter. [PHYS-15]
+        : 'EDGECAPACITANCE' parameter is missing for layer 'M9' [line 593 in file /home/yukunw/asap7-ry/asap7sc7p5t_27/techlef_misc/asap7_tech_4x_201209.lef]
+Warning : Missing wire parameter. [PHYS-15]
+        : 'EDGECAPACITANCE' parameter is missing for layer 'Pad' [line 617 in file /home/yukunw/asap7-ry/asap7sc7p5t_27/techlef_misc/asap7_tech_4x_201209.lef]
+Warning : Missing wire parameter. [PHYS-15]
+        : 'CPERSQDIST' parameter is missing for layer 'M1' [line 100 in file /home/yukunw/asap7-ry/asap7sc7p5t_27/techlef_misc/asap7_tech_4x_201209.lef]
+Warning : Missing wire parameter. [PHYS-15]
+        : 'CPERSQDIST' parameter is missing for layer 'M2' [line 165 in file /home/yukunw/asap7-ry/asap7sc7p5t_27/techlef_misc/asap7_tech_4x_201209.lef]
+Warning : Missing wire parameter. [PHYS-15]
+        : 'CPERSQDIST' parameter is missing for layer 'M3' [line 216 in file /home/yukunw/asap7-ry/asap7sc7p5t_27/techlef_misc/asap7_tech_4x_201209.lef]
+Warning : Missing wire parameter. [PHYS-15]
+        : 'CPERSQDIST' parameter is missing for layer 'M4' [line 296 in file /home/yukunw/asap7-ry/asap7sc7p5t_27/techlef_misc/asap7_tech_4x_201209.lef]
+Warning : Missing wire parameter. [PHYS-15]
+        : 'CPERSQDIST' parameter is missing for layer 'M5' [line 381 in file /home/yukunw/asap7-ry/asap7sc7p5t_27/techlef_misc/asap7_tech_4x_201209.lef]
+Warning : Missing wire parameter. [PHYS-15]
+        : 'CPERSQDIST' parameter is missing for layer 'M6' [line 462 in file /home/yukunw/asap7-ry/asap7sc7p5t_27/techlef_misc/asap7_tech_4x_201209.lef]
+Warning : Missing wire parameter. [PHYS-15]
+        : 'CPERSQDIST' parameter is missing for layer 'M7' [line 538 in file /home/yukunw/asap7-ry/asap7sc7p5t_27/techlef_misc/asap7_tech_4x_201209.lef]
+Warning : Missing wire parameter. [PHYS-15]
+        : 'CPERSQDIST' parameter is missing for layer 'M8' [line 566 in file /home/yukunw/asap7-ry/asap7sc7p5t_27/techlef_misc/asap7_tech_4x_201209.lef]
+Warning : Missing wire parameter. [PHYS-15]
+        : 'CPERSQDIST' parameter is missing for layer 'M9' [line 593 in file /home/yukunw/asap7-ry/asap7sc7p5t_27/techlef_misc/asap7_tech_4x_201209.lef]
+Warning : Missing wire parameter. [PHYS-15]
+        : 'CPERSQDIST' parameter is missing for layer 'Pad' [line 617 in file /home/yukunw/asap7-ry/asap7sc7p5t_27/techlef_misc/asap7_tech_4x_201209.lef]
+Warning : Missing wire parameter. [PHYS-15]
+        : 'RPERSQ' parameter is missing for layer 'M1' [line 100 in file /home/yukunw/asap7-ry/asap7sc7p5t_27/techlef_misc/asap7_tech_4x_201209.lef]
+Warning : Missing wire parameter. [PHYS-15]
+        : 'RPERSQ' parameter is missing for layer 'M2' [line 165 in file /home/yukunw/asap7-ry/asap7sc7p5t_27/techlef_misc/asap7_tech_4x_201209.lef]
+Warning : Missing wire parameter. [PHYS-15]
+        : 'RPERSQ' parameter is missing for layer 'M3' [line 216 in file /home/yukunw/asap7-ry/asap7sc7p5t_27/techlef_misc/asap7_tech_4x_201209.lef]
+Warning : Missing wire parameter. [PHYS-15]
+        : 'RPERSQ' parameter is missing for layer 'M4' [line 296 in file /home/yukunw/asap7-ry/asap7sc7p5t_27/techlef_misc/asap7_tech_4x_201209.lef]
+Warning : Missing wire parameter. [PHYS-15]
+        : 'RPERSQ' parameter is missing for layer 'M5' [line 381 in file /home/yukunw/asap7-ry/asap7sc7p5t_27/techlef_misc/asap7_tech_4x_201209.lef]
+Warning : Missing wire parameter. [PHYS-15]
+        : 'RPERSQ' parameter is missing for layer 'M6' [line 462 in file /home/yukunw/asap7-ry/asap7sc7p5t_27/techlef_misc/asap7_tech_4x_201209.lef]
+Warning : Missing wire parameter. [PHYS-15]
+        : 'RPERSQ' parameter is missing for layer 'M7' [line 538 in file /home/yukunw/asap7-ry/asap7sc7p5t_27/techlef_misc/asap7_tech_4x_201209.lef]
+Warning : Missing wire parameter. [PHYS-15]
+        : 'RPERSQ' parameter is missing for layer 'M8' [line 566 in file /home/yukunw/asap7-ry/asap7sc7p5t_27/techlef_misc/asap7_tech_4x_201209.lef]
+Warning : Missing wire parameter. [PHYS-15]
+        : 'RPERSQ' parameter is missing for layer 'M9' [line 593 in file /home/yukunw/asap7-ry/asap7sc7p5t_27/techlef_misc/asap7_tech_4x_201209.lef]
+Warning : Missing wire parameter. [PHYS-15]
+        : 'RPERSQ' parameter is missing for layer 'Pad' [line 617 in file /home/yukunw/asap7-ry/asap7sc7p5t_27/techlef_misc/asap7_tech_4x_201209.lef]
+Warning : The variant range of wire parameters is too large. An example of wire parameters are, a WIDTH for layer, PITCH for layer, MINSPACING for layers, etc. [PHYS-12]
+        : The variant range (0.012, 0.16) of 'OFFSET' for layers 'M4' and 'Pad' is too large.
+        : Check the consistency of the parameters, and see if you can ignore this message or you're using different LEF file with wrong parameters.
+Warning : The value of the wire parameter is too small. [PHYS-14]
+        : The 'OFFSET: 0.012' of layer 'M4' is much less than others.
+        : Check the consistency of the specified wire parameter.
+Warning : The value of the wire parameter is too small. [PHYS-14]
+        : The 'OFFSET: 0.012' of layer 'M4' is much less than others.
+Warning : The value of the wire parameter is too small. [PHYS-14]
+        : The 'OFFSET: 0.012' of layer 'M4' is much less than others.
+Warning : The value of the wire parameter is too small. [PHYS-14]
+        : The 'OFFSET: 0.012' of layer 'M4' is much less than others.
+Warning : The value of the wire parameter is too small. [PHYS-14]
+        : The 'OFFSET: 0.012' of layer 'M4' is much less than others.
+Warning : The variant range of wire parameters is too large. An example of wire parameters are, a WIDTH for layer, PITCH for layer, MINSPACING for layers, etc. [PHYS-12]
+        : The variant range (0.072, 8) of 'MINSPACING' for layers 'M1' and 'Pad' is too large.
+Warning : The value of the wire parameter is too big. [PHYS-13]
+        : The 'MINSPACING: 8' of layer 'Pad' is much bigger than others.
+        : Check the consistency of the specified wire parameter.
+  Libraries have 668 usable logic and 92 usable sequential lib-cells.
+@file(fused_syn.tcl) 17: read_hdl -sv { /home/yukunw/dacs-lab3/experiment/dacs2024/lab3/results/26631dadda_bit16fb6545dd58885bf2431c21988dff9e3bddef7e0086f449065a0c1e66cdebbb80/mult.v }
+@file(fused_syn.tcl) 18: elaborate MultTop
+Info    : Elaborating Design. [ELAB-1]
+        : Elaborating top-level block 'MultTop' from file '/home/yukunw/dacs-lab3/experiment/dacs2024/lab3/results/26631dadda_bit16fb6545dd58885bf2431c21988dff9e3bddef7e0086f449065a0c1e66cdebbb80/mult.v'.
+Warning : Unconnected instance input port detected. [ELABUTL-124]
+        : Unconnected input port 'clock' of instance 'comp_tree' of module 'CompressorTree' in file '/home/yukunw/dacs-lab3/experiment/dacs2024/lab3/results/26631dadda_bit16fb6545dd58885bf2431c21988dff9e3bddef7e0086f449065a0c1e66cdebbb80/mult.v' on line 9043, column 27, hid = 0.
+        : Run check_design to check 'Undriven Port(s)/Pin(s)' section for all unconnected instance input ports. It is better to double confirm with designer these unconnected instance input port are expected. During syn_gen the unconnected instance input ports are controlled by attribute 'hdl_unconnected_value', the default value is 0.
+Warning : Unconnected instance input port detected. [ELABUTL-124]
+        : Unconnected input port 'reset' of instance 'comp_tree' of module 'CompressorTree' in file '/home/yukunw/dacs-lab3/experiment/dacs2024/lab3/results/26631dadda_bit16fb6545dd58885bf2431c21988dff9e3bddef7e0086f449065a0c1e66cdebbb80/mult.v' on line 9043, column 27, hid = 0.
+Warning : Unconnected instance input port detected. [ELABUTL-124]
+        : Unconnected input port 'clock' of instance 'final_adder' of module 'CarryPropagateAdder' in file '/home/yukunw/dacs-lab3/experiment/dacs2024/lab3/results/26631dadda_bit16fb6545dd58885bf2431c21988dff9e3bddef7e0086f449065a0c1e66cdebbb80/mult.v' on line 9079, column 34, hid = 0.
+Warning : Unconnected instance input port detected. [ELABUTL-124]
+        : Unconnected input port 'reset' of instance 'final_adder' of module 'CarryPropagateAdder' in file '/home/yukunw/dacs-lab3/experiment/dacs2024/lab3/results/26631dadda_bit16fb6545dd58885bf2431c21988dff9e3bddef7e0086f449065a0c1e66cdebbb80/mult.v' on line 9079, column 34, hid = 0.
+Info    : Done Elaborating Design. [ELAB-3]
+        : Done elaborating 'MultTop'.
+Checking for analog nets...
+Check completed for analog nets.
+Checking for source RTL...
+Check completed for source RTL.
+UM:   timing.setup.tns  timing.setup.wns  snapshot
+UM:*                                      elaborate
+@file(fused_syn.tcl) 19: init_design -top MultTop
+Started checking and loading power intent for design MultTop...
+===============================================================
+No power intent for design 'MultTop'.
+Completed checking and loading power intent for design MultTop (runtime 0.00s).
+===============================================================================
+#
+# Reading SDC /home/yukunw/dacs-lab3/experiment/dacs2024/lab3/results/26631dadda_bit16fb6545dd58885bf2431c21988dff9e3bddef7e0086f449065a0c1e66cdebbb80/genus-rundir/scripts/constraint.sdc for view:setup_view (constraint_mode:common)
+#
+Statistics for commands executed by read_sdc:
+ "all_inputs"               - successful      1 , failed      0 (runtime  0.00)
+ "all_outputs"              - successful      1 , failed      0 (runtime  0.00)
+ "create_clock"             - successful      1 , failed      0 (runtime  0.00)
+ "current_design"           - successful      1 , failed      0 (runtime  0.00)
+ "get_ports"                - successful      1 , failed      0 (runtime  0.00)
+ "set_clock_groups"         - successful      1 , failed      0 (runtime  0.00)
+ "set_input_delay"          - successful      1 , failed      0 (runtime  0.00)
+ "set_output_delay"         - successful      1 , failed      0 (runtime  0.00)
+ "set_units"                - successful      2 , failed      0 (runtime  0.00)
+Total runtime 0.0
+
+  According to qrc_tech_file, there are total 10 routing layers [ V(5) / H(5) ]
+
+
+  According to qrc_tech_file, there are total 10 routing layers [ V(5) / H(5) ]
+
+Warning : Minimum width of layer in LEF does not match minimum width of layer in cap table. [PHYS-25]
+        : After applying shrink factor, minimum width of layer 'M1' in lef is '0.072', minimum width of layer 'LISD' in technology file is '0.1'.
+        : Compare the layer MinWidth of the cap_table_file with the MinWidth (WIDTH) of the corresponding layer in LEF. Set the attribute 'shrink_factor' to adjust the MinWidth layer value in the captable file
+Warning : Minimum width of layer in LEF does not match minimum width of layer in cap table. [PHYS-25]
+        : After applying shrink factor, minimum width of layer 'M4' in lef is '0.096', minimum width of layer 'M3' in technology file is '0.072'.
+Warning : Minimum width of layer in LEF does not match minimum width of layer in cap table. [PHYS-25]
+        : After applying shrink factor, minimum width of layer 'M6' in lef is '0.128', minimum width of layer 'M5' in technology file is '0.096'.
+Warning : Minimum width of layer in LEF does not match minimum width of layer in cap table. [PHYS-25]
+        : After applying shrink factor, minimum width of layer 'M8' in lef is '0.16', minimum width of layer 'M7' in technology file is '0.128'.
+  Setting attribute of root '/': 'read_qrc_tech_file_rc_corner' = true
+@file(fused_syn.tcl) 20: check_design -unresolved
+
+
+ 	 Check Design Report (c)
+	 ------------------- 
+
+  Unresolved References & Empty Modules
+  ------------------------------------- 
+No unresolved references in design 'MultTop'
+
+No empty modules in design 'MultTop'
+
+  Done Checking the design.
+@file(fused_syn.tcl) 30: if { [get_db lib_cells */ICGx*DC*] ne "" } {
+    set_dont_use [get_db lib_cells */ICGx*DC*]
+} else {
+    puts "WARNING: cell */ICGx*DC* was not found for set_dont_use"
+}
+@file(fused_syn.tcl) 36: if { [get_db lib_cells */AND4x1*] ne "" } {
+    set_dont_use [get_db lib_cells */AND4x1*]
+} else {
+    puts "WARNING: cell */AND4x1* was not found for set_dont_use"
+}
+@file(fused_syn.tcl) 42: if { [get_db lib_cells */SDFLx2*] ne "" } {
+    set_dont_use [get_db lib_cells */SDFLx2*]
+} else {
+    puts "WARNING: cell */SDFLx2* was not found for set_dont_use"
+}
+@file(fused_syn.tcl) 48: if { [get_db lib_cells */AO21x1*] ne "" } {
+    set_dont_use [get_db lib_cells */AO21x1*]
+} else {
+    puts "WARNING: cell */AO21x1* was not found for set_dont_use"
+}
+@file(fused_syn.tcl) 54: if { [get_db lib_cells */XOR2x2*] ne "" } {
+    set_dont_use [get_db lib_cells */XOR2x2*]
+} else {
+    puts "WARNING: cell */XOR2x2* was not found for set_dont_use"
+}
+@file(fused_syn.tcl) 60: if { [get_db lib_cells */OAI31xp33*] ne "" } {
+    set_dont_use [get_db lib_cells */OAI31xp33*]
+} else {
+    puts "WARNING: cell */OAI31xp33* was not found for set_dont_use"
+}
+@file(fused_syn.tcl) 66: if { [get_db lib_cells */OAI221xp5*] ne "" } {
+    set_dont_use [get_db lib_cells */OAI221xp5*]
+} else {
+    puts "WARNING: cell */OAI221xp5* was not found for set_dont_use"
+}
+@file(fused_syn.tcl) 72: if { [get_db lib_cells */SDFLx3*] ne "" } {
+    set_dont_use [get_db lib_cells */SDFLx3*]
+} else {
+    puts "WARNING: cell */SDFLx3* was not found for set_dont_use"
+}
+@file(fused_syn.tcl) 78: if { [get_db lib_cells */SDFLx1*] ne "" } {
+    set_dont_use [get_db lib_cells */SDFLx1*]
+} else {
+    puts "WARNING: cell */SDFLx1* was not found for set_dont_use"
+}
+@file(fused_syn.tcl) 84: if { [get_db lib_cells */AOI211xp5*] ne "" } {
+    set_dont_use [get_db lib_cells */AOI211xp5*]
+} else {
+    puts "WARNING: cell */AOI211xp5* was not found for set_dont_use"
+}
+@file(fused_syn.tcl) 90: if { [get_db lib_cells */OAI322xp33*] ne "" } {
+    set_dont_use [get_db lib_cells */OAI322xp33*]
+} else {
+    puts "WARNING: cell */OAI322xp33* was not found for set_dont_use"
+}
+@file(fused_syn.tcl) 96: if { [get_db lib_cells */OR2x6*] ne "" } {
+    set_dont_use [get_db lib_cells */OR2x6*]
+} else {
+    puts "WARNING: cell */OR2x6* was not found for set_dont_use"
+}
+@file(fused_syn.tcl) 102: if { [get_db lib_cells */A2O1A1O1Ixp25*] ne "" } {
+    set_dont_use [get_db lib_cells */A2O1A1O1Ixp25*]
+} else {
+    puts "WARNING: cell */A2O1A1O1Ixp25* was not found for set_dont_use"
+}
+@file(fused_syn.tcl) 108: if { [get_db lib_cells */XNOR2x1*] ne "" } {
+    set_dont_use [get_db lib_cells */XNOR2x1*]
+} else {
+    puts "WARNING: cell */XNOR2x1* was not found for set_dont_use"
+}
+@file(fused_syn.tcl) 114: if { [get_db lib_cells */OAI32xp33*] ne "" } {
+    set_dont_use [get_db lib_cells */OAI32xp33*]
+} else {
+    puts "WARNING: cell */OAI32xp33* was not found for set_dont_use"
+}
+@file(fused_syn.tcl) 120: if { [get_db lib_cells */FAx1*] ne "" } {
+    set_dont_use [get_db lib_cells */FAx1*]
+} else {
+    puts "WARNING: cell */FAx1* was not found for set_dont_use"
+}
+@file(fused_syn.tcl) 126: if { [get_db lib_cells */OAI21x1*] ne "" } {
+    set_dont_use [get_db lib_cells */OAI21x1*]
+} else {
+    puts "WARNING: cell */OAI21x1* was not found for set_dont_use"
+}
+@file(fused_syn.tcl) 132: if { [get_db lib_cells */OAI31xp67*] ne "" } {
+    set_dont_use [get_db lib_cells */OAI31xp67*]
+} else {
+    puts "WARNING: cell */OAI31xp67* was not found for set_dont_use"
+}
+@file(fused_syn.tcl) 138: if { [get_db lib_cells */OAI33xp33*] ne "" } {
+    set_dont_use [get_db lib_cells */OAI33xp33*]
+} else {
+    puts "WARNING: cell */OAI33xp33* was not found for set_dont_use"
+}
+@file(fused_syn.tcl) 144: if { [get_db lib_cells */AO21x2*] ne "" } {
+    set_dont_use [get_db lib_cells */AO21x2*]
+} else {
+    puts "WARNING: cell */AO21x2* was not found for set_dont_use"
+}
+@file(fused_syn.tcl) 150: if { [get_db lib_cells */AOI32xp33*] ne "" } {
+    set_dont_use [get_db lib_cells */AOI32xp33*]
+} else {
+    puts "WARNING: cell */AOI32xp33* was not found for set_dont_use"
+}
+@file(fused_syn.tcl) 159: set_db syn_generic_effort medium
+  Setting attribute of root '/': 'syn_generic_effort' = medium
+@file(fused_syn.tcl) 160: syn_generic 
+  Libraries have 600 usable logic and 80 usable sequential lib-cells.
+Info    : Unconnected instance input port detected. [ELABUTL-129]
+        : Assuming a  logic '0' value for unconnected input port 'clock' of instance 'comp_tree' of module 'CompressorTree'.
+        : The 'hdl_unconnected_value' attribute controls treatment of unconnected input port.
+Info    : Unconnected instance input port detected. [ELABUTL-129]
+        : Assuming a  logic '0' value for unconnected input port 'reset' of instance 'comp_tree' of module 'CompressorTree'.
+Info    : Unconnected instance input port detected. [ELABUTL-129]
+        : Assuming a  logic '0' value for unconnected input port 'clock' of instance 'final_adder' of module 'CarryPropagateAdder'.
+Info    : Unconnected instance input port detected. [ELABUTL-129]
+        : Assuming a  logic '0' value for unconnected input port 'reset' of instance 'final_adder' of module 'CarryPropagateAdder'.
+Info    : Deleting instances not driving any primary outputs. [GLO-34]
+        : Deleting 5 hierarchical instances.
+        : Optimizations such as constant propagation or redundancy removal could change the connections so a hierarchical instance does not drive any primary outputs anymore. To see the list of deleted hierarchical instances, set the 'information_level' attribute to 2 or above. If the message is truncated set the message attribute 'truncate' to false to see the complete list. To prevent this optimization, set the 'delete_unloaded_insts' root/subdesign attribute to 'false' or 'preserve' instance attribute to 'true'.
+Info    : Deleting instances not driving any primary outputs. [GLO-34]
+        : Deleting 333 hierarchical instances.
+Current PLE settings:
+
+Aspect ratio        : 1.00
+Shrink factor       : 1.00
+Scale of res/length : 1.00
+Scale of cap/length : 1.00
+Net derating factor : 1.00
+Thermal factor      : 1.00
+Via Resistance      : 10.00 ohm (from qrc_tech_file)
+Site size           : 1.22 um (from lef [tech+cell])
+
+                                   Capacitance  
+  Layer                             / Length         Data source:
+Name        Direction Utilization  (pF/micron)       qrc_tech_file
+------------------------------------------------
+LISD            V         0.00        0.000041  
+M1              H         1.00        0.000054  
+M2              V         1.00        0.000051  
+M3              H         1.00        0.000050  
+M4              V         1.00        0.000053  
+M5              H         1.00        0.000052  
+M6              V         1.00        0.000053  
+M7              H         1.00        0.000052  
+M8              V         1.00        0.000054  
+M9              H         1.00        0.000052  
+
+                                    Resistance   
+  Layer                              / Length         Data source:
+Name        Direction Utilization  (ohm/micron)       qrc_tech_file
+-------------------------------------------------
+LISD            V         0.00        10.000000  
+M1              H         1.00        16.955556  
+M2              V         1.00        16.955556  
+M3              H         1.00        15.011111  
+M4              V         1.00        10.791667  
+M5              H         1.00         9.712500  
+M6              V         1.00         7.021875  
+M7              H         1.00         7.021875  
+M8              V         1.00         5.115000  
+M9              H         1.00         5.115000  
+
+                                        Area     
+  Layer                               / Length        Data source:
+Name        Direction Utilization     (micron)        lef_library
+-------------------------------------------------
+M1              V         0.00         0.072000  
+M2              H         1.00         0.072000  
+M3              V         1.00         0.072000  
+M4              H         1.00         0.096000  
+M5              V         1.00         0.096000  
+M6              H         1.00         0.128000  
+M7              V         1.00         0.128000  
+M8              H         1.00         0.160000  
+M9              V         1.00         0.160000  
+Pad             H         1.00         0.160000  
+
+Info    : Synthesizing. [SYNTH-1]
+        : Synthesizing 'MultTop' to generic gates using 'medium' effort.
+PBS_Generic-Start - Elapsed_Time 0, CPU_Time 0.0
+stamp 'PBS_Generic-Start' being created for table 'pbs_debug'
+
+  Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:21(00:00:17) |  00:00:00(00:00:00) |   0.0(  0.0) |   15:33:52 (Apr01) |  614.0 MB | PBS_Generic-Start
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+Number of threads: 1 * 1   (id: pbs_debug, time_info v1.57)
+Info: (*N*) indicates data that was populated from previously saved time_info database
+Info: CPU time includes time of parent + longest thread
+TNS Restructuring config:  at stage: generic applied.
+Info    : Partition Based Synthesis execution skipped. [PHYS-752]
+        : Design size is less than the partition size '100000' for distributed generic optimization to kick in.
+Starting mux data reorder optimization [v1.0] (stage: post_to_gen_setup, startdef: MultTop, recur: true)
+Completed mux data reorder optimization (accepts: 0, rejects: 0, runtime: 0.003s)
+Current PLE settings:
+
+Aspect ratio        : 1.00
+Shrink factor       : 1.00
+Scale of res/length : 1.00
+Scale of cap/length : 1.00
+Net derating factor : 1.00
+Thermal factor      : 1.00
+Via Resistance      : 10.00 ohm (from qrc_tech_file)
+Site size           : 1.22 um (from lef [tech+cell])
+
+                                   Capacitance  
+  Layer                             / Length         Data source:
+Name        Direction Utilization  (pF/micron)       qrc_tech_file
+------------------------------------------------
+LISD            V         0.00        0.000041  
+M1              H         1.00        0.000054  
+M2              V         1.00        0.000051  
+M3              H         1.00        0.000050  
+M4              V         1.00        0.000053  
+M5              H         1.00        0.000052  
+M6              V         1.00        0.000053  
+M7              H         1.00        0.000052  
+M8              V         1.00        0.000054  
+M9              H         1.00        0.000052  
+
+                                    Resistance   
+  Layer                              / Length         Data source:
+Name        Direction Utilization  (ohm/micron)       qrc_tech_file
+-------------------------------------------------
+LISD            V         0.00        10.000000  
+M1              H         1.00        16.955556  
+M2              V         1.00        16.955556  
+M3              H         1.00        15.011111  
+M4              V         1.00        10.791667  
+M5              H         1.00         9.712500  
+M6              V         1.00         7.021875  
+M7              H         1.00         7.021875  
+M8              V         1.00         5.115000  
+M9              H         1.00         5.115000  
+
+                                        Area     
+  Layer                               / Length        Data source:
+Name        Direction Utilization     (micron)        lef_library
+-------------------------------------------------
+M1              V         0.00         0.072000  
+M2              H         1.00         0.072000  
+M3              V         1.00         0.072000  
+M4              H         1.00         0.096000  
+M5              V         1.00         0.096000  
+M6              H         1.00         0.128000  
+M7              V         1.00         0.128000  
+M8              H         1.00         0.160000  
+M9              V         1.00         0.160000  
+Pad             H         1.00         0.160000  
+
+Starting reconvergence optimization [v1.0] (stage: pre_rtlopt, startdef: MultTop, recur: true)
+Completed reconvergence optimization (accepts: 0, rejects: 0, runtime: 0.002s)
+Starting logic restructure optimization [v1.0] (stage: pre_rtlopt, startdef: MultTop, recur: true)
+Completed logic restructure optimization (accepts: 0, rejects: 0, runtime: 0.002s)
+Info    : Pre-processed datapath logic. [DPOPT-6]
+        : No pre-processing optimizations applied to datapath logic in 'MultTop'.
+Info    : Skipping datapath optimization. [DPOPT-5]
+        : There is no datapath logic in 'MultTop'.
+Starting mux data reorder optimization [v1.0] (stage: post_rtlopt, startdef: MultTop, recur: true)
+Completed mux data reorder optimization (accepts: 0, rejects: 0, runtime: 0.003s)
+Starting mux speculation [v1.0] (stage: post_muxopt, startdef: MultTop, recur: true)
+Starting speculation optimization
+Completed speculation optimization (accepts:0)
+Completed mux speculation (accepts: 0, rejects: 0, runtime: 0.035s)
+==================================
+Stage : to_generic 
+==================================
+  =================
+   Message Summary
+  =================
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+|     Id      |  Sev   |Count |                                                    Message Text                                                     |
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+| CDFG-500    |Info    |    6 |Unused module input port.                                                                                            |
+|             |        |      |In port definition within the module, the input port is not used in any assignment statements or conditional         |
+|             |        |      | expressions for decision statements.                                                                                |
+| DPOPT-5     |Info    |    1 |Skipping datapath optimization.                                                                                      |
+| DPOPT-6     |Info    |    1 |Pre-processed datapath logic.                                                                                        |
+| ELAB-1      |Info    |    1 |Elaborating Design.                                                                                                  |
+| ELAB-2      |Info    |    8 |Elaborating Subdesign.                                                                                               |
+| ELAB-3      |Info    |    1 |Done Elaborating Design.                                                                                             |
+| ELABUTL-124 |Warning |    4 |Unconnected instance input port detected.                                                                            |
+|             |        |      |Run check_design to check 'Undriven Port(s)/Pin(s)                                                                   |
+|             |        |      | ' section for all unconnected instance input ports. It is better to double confirm with designer these unconnected  |
+|             |        |      | instance input port are expected. During syn_gen the unconnected instance input ports are controlled by attribute   |
+|             |        |      | 'hdl_unconnected_value', the default value is 0.                                                                    |
+| ELABUTL-129 |Info    |    4 |Unconnected instance input port detected.                                                                            |
+|             |        |      |The 'hdl_unconnected_value' attribute controls treatment of unconnected input port.                                  |
+| ELABUTL-132 |Info    |    4 |Unused instance port.                                                                                                |
+|             |        |      |Please check the reported scenario of unconnected instance port to ensure that it matches the design intent.         |
+| GLO-34      |Info    |    2 |Deleting instances not driving any primary outputs.                                                                  |
+|             |        |      |Optimizations such as constant propagation or redundancy removal could change the connections so a hierarchical      |
+|             |        |      | instance does not drive any primary outputs anymore. To see the list of deleted hierarchical instances, set the     |
+|             |        |      | 'information_level' attribute to 2 or above. If the message is truncated set the message attribute 'truncate' to    |
+|             |        |      | false to see the complete list. To prevent this optimization, set the 'delete_unloaded_insts' root/subdesign        |
+|             |        |      | attribute to 'false' or 'preserve' instance attribute to 'true'.                                                    |
+| LBR-103     |Warning |  240 |The clock gating integrated cell is not usable.                                                                      |
+|             |        |      |The 'clock_gating_integrated_cell' attribute and state table or latch group definition for the clock gating          |
+|             |        |      | integrated cell is not matching.                                                                                    |
+| LBR-109     |Info    |    1 |Set default library domain.                                                                                          |
+| LBR-155     |Info    |   32 |Mismatch in unateness between 'timing_sense' attribute and the function.                                             |
+|             |        |      |The 'timing_sense' attribute will be respected.                                                                      |
+| LBR-161     |Info    |    1 |Setting the maximum print count of this message to 10 if information_level is less than 9.                           |
+| LBR-162     |Info    |   68 |Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed.                                              |
+|             |        |      |Setting the 'timing_sense' to non_unate.                                                                             |
+| LBR-412     |Info    |   20 |Created nominal operating condition.                                                                                 |
+|             |        |      |The nominal operating condition is represented, either by the nominal PVT values specified in the library source     |
+|             |        |      | (via nom_process,nom_voltage and nom_temperature respectively), or by the default PVT values (1.0,1.0,1.0).         |
+| LBR-43      |Warning |   10 |Libcell has no area attribute.  Defaulting to 0 area.                                                                |
+|             |        |      |Specify a valid area value for the libcell.                                                                          |
+| LBR-526     |Warning |   40 |Missing sequential block in the sequential cell.                                                                     |
+| PHYS-106    |Warning |    3 |Site already defined before, duplicated site will be ignored.                                                        |
+| PHYS-12     |Warning |    2 |The variant range of wire parameters is too large. An example of wire parameters are, a WIDTH for layer, PITCH for   |
+|             |        |      | layer, MINSPACING for layers, etc.                                                                                  |
+|             |        |      |Check the consistency of the parameters, and see if you can ignore this message or you're using different LEF file   |
+|             |        |      | with wrong parameters.                                                                                              |
+| PHYS-129    |Info    |    9 |Via with no resistance will have a value of '0.0' assigned for resistance value.                                     |
+|             |        |      |If this is the expected behavior, this message can be ignored.                                                       |
+| PHYS-13     |Warning |    1 |The value of the wire parameter is too big.                                                                          |
+|             |        |      |Check the consistency of the specified wire parameter.                                                               |
+| PHYS-14     |Warning |    5 |The value of the wire parameter is too small.                                                                        |
+|             |        |      |Check the consistency of the specified wire parameter.                                                               |
+| PHYS-15     |Warning |   30 |Missing wire parameter.                                                                                              |
+|             |        |      |Check the wire parameter in LEF technology files.                                                                    |
+| PHYS-25     |Warning |    4 |Minimum width of layer in LEF does not match minimum width of layer in cap table.                                    |
+|             |        |      |Compare the layer MinWidth of the cap_table_file with the MinWidth (WIDTH)                                           |
+|             |        |      | of the corresponding layer in LEF. Set the attribute 'shrink_factor' to adjust the MinWidth layer value in the      |
+|             |        |      | captable file                                                                                                       |
+| PHYS-752    |Info    |    1 |Partition Based Synthesis execution skipped.                                                                         |
+| SYNTH-1     |Info    |    1 |Synthesizing.                                                                                                        |
+| TUI-31      |Warning |    2 |Obsolete command.                                                                                                    |
+|             |        |      |This command is no longer supported.                                                                                 |
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+Current PLE settings:
+
+Aspect ratio        : 1.00
+Shrink factor       : 1.00
+Scale of res/length : 1.00
+Scale of cap/length : 1.00
+Net derating factor : 1.00
+Thermal factor      : 1.00
+Via Resistance      : 10.00 ohm (from qrc_tech_file)
+Site size           : 1.22 um (from lef [tech+cell])
+
+                                   Capacitance  
+  Layer                             / Length         Data source:
+Name        Direction Utilization  (pF/micron)       qrc_tech_file
+------------------------------------------------
+LISD            V         0.00        0.000041  
+M1              H         1.00        0.000054  
+M2              V         1.00        0.000051  
+M3              H         1.00        0.000050  
+M4              V         1.00        0.000053  
+M5              H         1.00        0.000052  
+M6              V         1.00        0.000053  
+M7              H         1.00        0.000052  
+M8              V         1.00        0.000054  
+M9              H         1.00        0.000052  
+
+                                    Resistance   
+  Layer                              / Length         Data source:
+Name        Direction Utilization  (ohm/micron)       qrc_tech_file
+-------------------------------------------------
+LISD            V         0.00        10.000000  
+M1              H         1.00        16.955556  
+M2              V         1.00        16.955556  
+M3              H         1.00        15.011111  
+M4              V         1.00        10.791667  
+M5              H         1.00         9.712500  
+M6              V         1.00         7.021875  
+M7              H         1.00         7.021875  
+M8              V         1.00         5.115000  
+M9              H         1.00         5.115000  
+
+                                        Area     
+  Layer                               / Length        Data source:
+Name        Direction Utilization     (micron)        lef_library
+-------------------------------------------------
+M1              V         0.00         0.072000  
+M2              H         1.00         0.072000  
+M3              V         1.00         0.072000  
+M4              H         1.00         0.096000  
+M5              V         1.00         0.096000  
+M6              H         1.00         0.128000  
+M7              V         1.00         0.128000  
+M8              H         1.00         0.160000  
+M9              V         1.00         0.160000  
+Pad             H         1.00         0.160000  
+
+Mapper: Libraries have:
+	domain setup_cond: 600 combo usable cells and 80 sequential usable cells
+Multi-threaded constant propagation [1|0] ...
+==================================
+Stage : first_condense 
+==================================
+  =================
+   Message Summary
+  =================
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+|   Id   |Sev  |Count |                                                        Message Text                                                         |
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+| GLO-51 |Info |  355 |Hierarchical instance automatically ungrouped.                                                                               |
+|        |     |      |Hierarchical instances can be automatically ungrouped to allow for better area or timing optimization. To prevent this       |
+|        |     |      | ungroup, set the root-level attribute 'auto_ungroup' to 'none'. You can also prevent individual ungroup with setting the    |
+|        |     |      | attribute 'ungroup_ok' of instances or modules to 'false'.                                                                  |
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+ 
+Global mapping target info
+==========================
+Cost Group 'clock' target slack:    36 ps
+Target path end-point (Port: MultTop/product[31])
+
+PBS_Generic_Opt-Post - Elapsed_Time 5, CPU_Time 4.0
+stamp 'PBS_Generic_Opt-Post' being created for table 'pbs_debug'
+
+  Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:21(00:00:17) |  00:00:00(00:00:00) |   0.0(  0.0) |   15:33:52 (Apr01) |  614.0 MB | PBS_Generic-Start
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:25(00:00:22) |  00:00:04(00:00:05) | 100.0(100.0) |   15:33:57 (Apr01) |  567.3 MB | PBS_Generic_Opt-Post
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+Number of threads: 1 * 1   (id: pbs_debug, time_info v1.57)
+Info: (*N*) indicates data that was populated from previously saved time_info database
+Info: CPU time includes time of parent + longest thread
+PBS_Generic-Postgen HBO Optimizations - Elapsed_Time 0, CPU_Time 0.0
+stamp 'PBS_Generic-Postgen HBO Optimizations' being created for table 'pbs_debug'
+
+  Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:21(00:00:17) |  00:00:00(00:00:00) |   0.0(  0.0) |   15:33:52 (Apr01) |  614.0 MB | PBS_Generic-Start
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:25(00:00:22) |  00:00:04(00:00:05) | 100.0(100.0) |   15:33:57 (Apr01) |  567.3 MB | PBS_Generic_Opt-Post
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:25(00:00:22) |  00:00:00(00:00:00) |   0.0(  0.0) |   15:33:57 (Apr01) |  567.3 MB | PBS_Generic-Postgen HBO Optimizations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+Number of threads: 1 * 1   (id: pbs_debug, time_info v1.57)
+Info: (*N*) indicates data that was populated from previously saved time_info database
+Info: CPU time includes time of parent + longest thread
+##>=================== Cadence Confidential (Generic-Logical) ===================
+##>=================== Cadence Confidential (Generic-Logical) ===================
+##>Main Thread Summary:
+##>----------------------------------------------------------------------------------------
+##>STEP                           Elapsed       WNS       TNS     Insts      Area    Memory
+##>----------------------------------------------------------------------------------------
+##>G:Initial                            2         -         -      2093      2864       614
+##>G:Setup                              0         -         -         -         -         -
+##>G:Launch ST                          0         -         -         -         -         -
+##>G:Design Partition                   0         -         -         -         -         -
+##>G:Create Partition Netlists          0         -         -         -         -         -
+##>G:Init Power                         0         -         -         -         -         -
+##>G:Budgeting                          0         -         -         -         -         -
+##>G:Derenv-DB                          0         -         -         -         -         -
+##>G:Debug Outputs                      0         -         -         -         -         -
+##>G:ST loading                         0         -         -         -         -         -
+##>G:Distributed                        0         -         -         -         -         -
+##>G:Timer                              0         -         -         -         -         -
+##>G:Assembly                           0         -         -         -         -         -
+##>G:DFT                                0         -         -         -         -         -
+##>G:Const Prop                         0         -         -      2664      3645       567
+##>G:Misc                               5
+##>----------------------------------------------------------------------------------------
+##>Total Elapsed                        7
+##>========================================================================================
+Info    : Done synthesizing. [SYNTH-2]
+        : Done synthesizing 'MultTop' to generic gates.
+      timing.setup.tns  timing.setup.wns  snapshot
+UM:*                                      syn_gen
+@file(fused_syn.tcl) 162: set_db syn_map_effort high
+  Setting attribute of root '/': 'syn_map_effort' = high
+@file(fused_syn.tcl) 163: syn_map 
+Warning : The clock gating integrated cell is not usable. [LBR-103]
+        : The 'clock_gating_integrated_cell' attribute 'latch_posedge_precontrol' does not match with inferred definition 'none_negedge_control' for  clock gating cell 'ICGx1_ASAP7_75t_L'.
+Warning : The clock gating integrated cell is not usable. [LBR-103]
+        : The 'clock_gating_integrated_cell' attribute 'latch_posedge_precontrol' does not match with inferred definition 'none_negedge_control' for  clock gating cell 'ICGx2_ASAP7_75t_L'.
+Warning : The clock gating integrated cell is not usable. [LBR-103]
+        : The 'clock_gating_integrated_cell' attribute 'latch_posedge_precontrol' does not match with inferred definition 'none_negedge_control' for  clock gating cell 'ICGx2p67DC_ASAP7_75t_L'.
+Warning : The clock gating integrated cell is not usable. [LBR-103]
+        : The 'clock_gating_integrated_cell' attribute 'latch_posedge_precontrol' does not match with inferred definition 'none_negedge_control' for  clock gating cell 'ICGx3_ASAP7_75t_L'.
+Warning : The clock gating integrated cell is not usable. [LBR-103]
+        : The 'clock_gating_integrated_cell' attribute 'latch_posedge_precontrol' does not match with inferred definition 'none_negedge_control' for  clock gating cell 'ICGx4DC_ASAP7_75t_L'.
+Warning : The clock gating integrated cell is not usable. [LBR-103]
+        : The 'clock_gating_integrated_cell' attribute 'latch_posedge_precontrol' does not match with inferred definition 'none_negedge_control' for  clock gating cell 'ICGx4_ASAP7_75t_L'.
+Warning : The clock gating integrated cell is not usable. [LBR-103]
+        : The 'clock_gating_integrated_cell' attribute 'latch_posedge_precontrol' does not match with inferred definition 'none_negedge_control' for  clock gating cell 'ICGx5_ASAP7_75t_L'.
+Warning : The clock gating integrated cell is not usable. [LBR-103]
+        : The 'clock_gating_integrated_cell' attribute 'latch_posedge_precontrol' does not match with inferred definition 'none_negedge_control' for  clock gating cell 'ICGx5p33DC_ASAP7_75t_L'.
+Warning : The clock gating integrated cell is not usable. [LBR-103]
+        : The 'clock_gating_integrated_cell' attribute 'latch_posedge_precontrol' does not match with inferred definition 'none_negedge_control' for  clock gating cell 'ICGx6p67DC_ASAP7_75t_L'.
+Warning : The clock gating integrated cell is not usable. [LBR-103]
+        : The 'clock_gating_integrated_cell' attribute 'latch_posedge_precontrol' does not match with inferred definition 'none_negedge_control' for  clock gating cell 'ICGx8DC_ASAP7_75t_L'.
+Warning : The clock gating integrated cell is not usable. [LBR-103]
+        : The 'clock_gating_integrated_cell' attribute 'latch_posedge_precontrol' does not match with inferred definition 'none_negedge_control' for  clock gating cell 'ICGx1_ASAP7_75t_R'.
+Warning : The clock gating integrated cell is not usable. [LBR-103]
+        : The 'clock_gating_integrated_cell' attribute 'latch_posedge_precontrol' does not match with inferred definition 'none_negedge_control' for  clock gating cell 'ICGx2_ASAP7_75t_R'.
+Warning : The clock gating integrated cell is not usable. [LBR-103]
+        : The 'clock_gating_integrated_cell' attribute 'latch_posedge_precontrol' does not match with inferred definition 'none_negedge_control' for  clock gating cell 'ICGx2p67DC_ASAP7_75t_R'.
+Warning : The clock gating integrated cell is not usable. [LBR-103]
+        : The 'clock_gating_integrated_cell' attribute 'latch_posedge_precontrol' does not match with inferred definition 'none_negedge_control' for  clock gating cell 'ICGx3_ASAP7_75t_R'.
+Warning : The clock gating integrated cell is not usable. [LBR-103]
+        : The 'clock_gating_integrated_cell' attribute 'latch_posedge_precontrol' does not match with inferred definition 'none_negedge_control' for  clock gating cell 'ICGx4DC_ASAP7_75t_R'.
+Warning : The clock gating integrated cell is not usable. [LBR-103]
+        : The 'clock_gating_integrated_cell' attribute 'latch_posedge_precontrol' does not match with inferred definition 'none_negedge_control' for  clock gating cell 'ICGx4_ASAP7_75t_R'.
+Warning : The clock gating integrated cell is not usable. [LBR-103]
+        : The 'clock_gating_integrated_cell' attribute 'latch_posedge_precontrol' does not match with inferred definition 'none_negedge_control' for  clock gating cell 'ICGx5_ASAP7_75t_R'.
+Warning : The clock gating integrated cell is not usable. [LBR-103]
+        : The 'clock_gating_integrated_cell' attribute 'latch_posedge_precontrol' does not match with inferred definition 'none_negedge_control' for  clock gating cell 'ICGx5p33DC_ASAP7_75t_R'.
+Warning : The clock gating integrated cell is not usable. [LBR-103]
+        : The 'clock_gating_integrated_cell' attribute 'latch_posedge_precontrol' does not match with inferred definition 'none_negedge_control' for  clock gating cell 'ICGx6p67DC_ASAP7_75t_R'.
+Warning : The clock gating integrated cell is not usable. [LBR-103]
+        : The 'clock_gating_integrated_cell' attribute 'latch_posedge_precontrol' does not match with inferred definition 'none_negedge_control' for  clock gating cell 'ICGx8DC_ASAP7_75t_R'.
+Current PLE settings:
+
+Aspect ratio        : 1.00
+Shrink factor       : 1.00
+Scale of res/length : 1.00
+Scale of cap/length : 1.00
+Net derating factor : 1.00
+Thermal factor      : 1.00
+Via Resistance      : 10.00 ohm (from qrc_tech_file)
+Site size           : 1.22 um (from lef [tech+cell])
+
+                                   Capacitance  
+  Layer                             / Length         Data source:
+Name        Direction Utilization  (pF/micron)       qrc_tech_file
+------------------------------------------------
+LISD            V         0.00        0.000041  
+M1              H         1.00        0.000054  
+M2              V         1.00        0.000051  
+M3              H         1.00        0.000050  
+M4              V         1.00        0.000053  
+M5              H         1.00        0.000052  
+M6              V         1.00        0.000053  
+M7              H         1.00        0.000052  
+M8              V         1.00        0.000054  
+M9              H         1.00        0.000052  
+
+                                    Resistance   
+  Layer                              / Length         Data source:
+Name        Direction Utilization  (ohm/micron)       qrc_tech_file
+-------------------------------------------------
+LISD            V         0.00        10.000000  
+M1              H         1.00        16.955556  
+M2              V         1.00        16.955556  
+M3              H         1.00        15.011111  
+M4              V         1.00        10.791667  
+M5              H         1.00         9.712500  
+M6              V         1.00         7.021875  
+M7              H         1.00         7.021875  
+M8              V         1.00         5.115000  
+M9              H         1.00         5.115000  
+
+                                        Area     
+  Layer                               / Length        Data source:
+Name        Direction Utilization     (micron)        lef_library
+-------------------------------------------------
+M1              V         0.00         0.072000  
+M2              H         1.00         0.072000  
+M3              V         1.00         0.072000  
+M4              H         1.00         0.096000  
+M5              V         1.00         0.096000  
+M6              H         1.00         0.128000  
+M7              V         1.00         0.128000  
+M8              H         1.00         0.160000  
+M9              V         1.00         0.160000  
+Pad             H         1.00         0.160000  
+
+Info    : Mapping. [SYNTH-4]
+        : Mapping 'MultTop' using 'high' effort.
+Mapper: Libraries have:
+	domain setup_cond: 600 combo usable cells and 80 sequential usable cells
+Configuring mapper costing (none)
+TNS Restructuring config:  at stage: map applied.
+PBS_TechMap-Start - Elapsed_Time 0, CPU_Time 0.0
+stamp 'PBS_TechMap-Start' being created for table 'pbs_debug'
+
+  Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:21(00:00:17) |  00:00:00(00:00:00) |   0.0(  0.0) |   15:33:52 (Apr01) |  614.0 MB | PBS_Generic-Start
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:25(00:00:22) |  00:00:04(00:00:05) |  66.7( 83.3) |   15:33:57 (Apr01) |  567.3 MB | PBS_Generic_Opt-Post
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:25(00:00:22) |  00:00:00(00:00:00) |   0.0(  0.0) |   15:33:57 (Apr01) |  567.3 MB | PBS_Generic-Postgen HBO Optimizations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:27(00:00:23) |  00:00:02(00:00:01) |  33.3( 16.7) |   15:33:58 (Apr01) |  567.3 MB | PBS_TechMap-Start
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+Number of threads: 1 * 1   (id: pbs_debug, time_info v1.57)
+Info: (*N*) indicates data that was populated from previously saved time_info database
+Info: CPU time includes time of parent + longest thread
+PBS_TechMap-Premap HBO Optimizations - Elapsed_Time 0, CPU_Time 0.0
+stamp 'PBS_TechMap-Premap HBO Optimizations' being created for table 'pbs_debug'
+
+  Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:21(00:00:17) |  00:00:00(00:00:00) |   0.0(  0.0) |   15:33:52 (Apr01) |  614.0 MB | PBS_Generic-Start
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:25(00:00:22) |  00:00:04(00:00:05) |  66.7( 83.3) |   15:33:57 (Apr01) |  567.3 MB | PBS_Generic_Opt-Post
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:25(00:00:22) |  00:00:00(00:00:00) |   0.0(  0.0) |   15:33:57 (Apr01) |  567.3 MB | PBS_Generic-Postgen HBO Optimizations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:27(00:00:23) |  00:00:02(00:00:01) |  33.3( 16.7) |   15:33:58 (Apr01) |  567.3 MB | PBS_TechMap-Start
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:27(00:00:23) |  00:00:00(00:00:00) |   0.0(  0.0) |   15:33:58 (Apr01) |  567.3 MB | PBS_TechMap-Premap HBO Optimizations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+Number of threads: 1 * 1   (id: pbs_debug, time_info v1.57)
+Info: (*N*) indicates data that was populated from previously saved time_info database
+Info: CPU time includes time of parent + longest thread
+Info    : Partition Based Synthesis execution skipped. [PHYS-752]
+        : Design size is less than the partition size '100000' for distributed mapping optimization to kick in.
+Current PLE settings:
+
+Aspect ratio        : 1.00
+Shrink factor       : 1.00
+Scale of res/length : 1.00
+Scale of cap/length : 1.00
+Net derating factor : 1.00
+Thermal factor      : 1.00
+Via Resistance      : 10.00 ohm (from qrc_tech_file)
+Site size           : 1.22 um (from lef [tech+cell])
+
+                                   Capacitance  
+  Layer                             / Length         Data source:
+Name        Direction Utilization  (pF/micron)       qrc_tech_file
+------------------------------------------------
+LISD            V         0.00        0.000041  
+M1              H         1.00        0.000054  
+M2              V         1.00        0.000051  
+M3              H         1.00        0.000050  
+M4              V         1.00        0.000053  
+M5              H         1.00        0.000052  
+M6              V         1.00        0.000053  
+M7              H         1.00        0.000052  
+M8              V         1.00        0.000054  
+M9              H         1.00        0.000052  
+
+                                    Resistance   
+  Layer                              / Length         Data source:
+Name        Direction Utilization  (ohm/micron)       qrc_tech_file
+-------------------------------------------------
+LISD            V         0.00        10.000000  
+M1              H         1.00        16.955556  
+M2              V         1.00        16.955556  
+M3              H         1.00        15.011111  
+M4              V         1.00        10.791667  
+M5              H         1.00         9.712500  
+M6              V         1.00         7.021875  
+M7              H         1.00         7.021875  
+M8              V         1.00         5.115000  
+M9              H         1.00         5.115000  
+
+                                        Area     
+  Layer                               / Length        Data source:
+Name        Direction Utilization     (micron)        lef_library
+-------------------------------------------------
+M1              V         0.00         0.072000  
+M2              H         1.00         0.072000  
+M3              V         1.00         0.072000  
+M4              H         1.00         0.096000  
+M5              V         1.00         0.096000  
+M6              H         1.00         0.128000  
+M7              V         1.00         0.128000  
+M8              H         1.00         0.160000  
+M9              V         1.00         0.160000  
+Pad             H         1.00         0.160000  
+
+Mapper: Libraries have:
+	domain setup_cond: 600 combo usable cells and 80 sequential usable cells
+ 
+Global mapping target info
+==========================
+Cost Group 'clock' target slack:    36 ps
+Target path end-point (Port: MultTop/product[31])
+
+ 
+Global mapping status
+=====================
+                                   Group   
+                                  Tot Wrst 
+                           Total  Weighted 
+Operation                   Area   Slacks  
+ global_map                 2618        0 
+
+    Cost Group            Target    Slack    Diff.  Constr.
+-----------------------------------------------------------
+         clock                36      612              1500 
+
+ 
+Global incremental target info
+==============================
+Cost Group 'clock' target slack:    24 ps
+Target path end-point (Port: MultTop/product[30])
+
+==================================
+Stage : global_incr_map 
+==================================
+  =================
+   Message Summary
+  =================
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+|    Id    |  Sev   |Count |                                                     Message Text                                                       |
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+| GLO-51   |Info    |    2 |Hierarchical instance automatically ungrouped.                                                                          |
+|          |        |      |Hierarchical instances can be automatically ungrouped to allow for better area or timing optimization. To prevent this  |
+|          |        |      | ungroup, set the root-level attribute 'auto_ungroup' to 'none'. You can also prevent individual ungroup with setting   |
+|          |        |      | the attribute 'ungroup_ok' of instances or modules to 'false'.                                                         |
+| LBR-103  |Warning |   40 |The clock gating integrated cell is not usable.                                                                         |
+|          |        |      |The 'clock_gating_integrated_cell' attribute and state table or latch group definition for the clock gating integrated  |
+|          |        |      | cell is not matching.                                                                                                  |
+| LBR-155  |Info    |    8 |Mismatch in unateness between 'timing_sense' attribute and the function.                                                |
+|          |        |      |The 'timing_sense' attribute will be respected.                                                                         |
+| PHYS-752 |Info    |    1 |Partition Based Synthesis execution skipped.                                                                            |
+| SYNTH-2  |Info    |    1 |Done synthesizing.                                                                                                      |
+| SYNTH-4  |Info    |    1 |Mapping.                                                                                                                |
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+ 
+Global incremental optimization status
+======================================
+                                   Group   
+                                  Tot Wrst 
+                           Total  Weighted 
+Operation                   Area   Slacks  
+ global_incr                2618        0 
+
+    Cost Group            Target    Slack    Diff.  Constr.
+-----------------------------------------------------------
+         clock                24      616              1500 
+
+INFO: skipping constant propagation
+PBS_Techmap-Global Mapping - Elapsed_Time 5, CPU_Time 4.993455000000001
+stamp 'PBS_Techmap-Global Mapping' being created for table 'pbs_debug'
+
+  Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:21(00:00:17) |  00:00:00(00:00:00) |   0.0(  0.0) |   15:33:52 (Apr01) |  614.0 MB | PBS_Generic-Start
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:25(00:00:22) |  00:00:04(00:00:05) |  36.4( 45.5) |   15:33:57 (Apr01) |  567.3 MB | PBS_Generic_Opt-Post
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:25(00:00:22) |  00:00:00(00:00:00) |   0.0(  0.0) |   15:33:57 (Apr01) |  567.3 MB | PBS_Generic-Postgen HBO Optimizations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:27(00:00:23) |  00:00:02(00:00:01) |  18.2(  9.1) |   15:33:58 (Apr01) |  567.3 MB | PBS_TechMap-Start
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:27(00:00:23) |  00:00:00(00:00:00) |   0.0(  0.0) |   15:33:58 (Apr01) |  567.3 MB | PBS_TechMap-Premap HBO Optimizations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:31(00:00:28) |  00:00:04(00:00:05) |  45.4( 45.5) |   15:34:03 (Apr01) |  560.7 MB | PBS_Techmap-Global Mapping
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+Number of threads: 1 * 1   (id: pbs_debug, time_info v1.57)
+Info: (*N*) indicates data that was populated from previously saved time_info database
+Info: CPU time includes time of parent + longest thread
+Info    : Forcing flat compare. [CFM-212]
+        : No hierarchies found in design.
+Info    : Wrote formal verification information. [CFM-5]
+        : Wrote 'fv/MultTop/fv_map.fv.json' for netlist 'fv/MultTop/fv_map.v.gz'.
+Info    : Wrote dofile. [CFM-1]
+        : Dofile is 'fv/MultTop/rtl_to_fv_map.do'.
+PBS_TechMap-Datapath Postmap Operations - Elapsed_Time 1, CPU_Time 0.9999999999999964
+stamp 'PBS_TechMap-Datapath Postmap Operations' being created for table 'pbs_debug'
+
+  Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:21(00:00:17) |  00:00:00(00:00:00) |   0.0(  0.0) |   15:33:52 (Apr01) |  614.0 MB | PBS_Generic-Start
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:25(00:00:22) |  00:00:04(00:00:05) |  33.4( 41.7) |   15:33:57 (Apr01) |  567.3 MB | PBS_Generic_Opt-Post
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:25(00:00:22) |  00:00:00(00:00:00) |   0.0(  0.0) |   15:33:57 (Apr01) |  567.3 MB | PBS_Generic-Postgen HBO Optimizations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:27(00:00:23) |  00:00:02(00:00:01) |  16.7(  8.3) |   15:33:58 (Apr01) |  567.3 MB | PBS_TechMap-Start
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:27(00:00:23) |  00:00:00(00:00:00) |   0.0(  0.0) |   15:33:58 (Apr01) |  567.3 MB | PBS_TechMap-Premap HBO Optimizations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:31(00:00:28) |  00:00:04(00:00:05) |  41.6( 41.7) |   15:34:03 (Apr01) |  560.7 MB | PBS_Techmap-Global Mapping
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:32(00:00:29) |  00:00:00(00:00:01) |   8.3(  8.3) |   15:34:04 (Apr01) |  560.7 MB | PBS_TechMap-Datapath Postmap Operations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+Number of threads: 1 * 1   (id: pbs_debug, time_info v1.57)
+Info: (*N*) indicates data that was populated from previously saved time_info database
+Info: CPU time includes time of parent + longest thread
+PBS_TechMap-Postmap HBO Optimizations - Elapsed_Time 0, CPU_Time 0.0
+stamp 'PBS_TechMap-Postmap HBO Optimizations' being created for table 'pbs_debug'
+
+  Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:21(00:00:17) |  00:00:00(00:00:00) |   0.0(  0.0) |   15:33:52 (Apr01) |  614.0 MB | PBS_Generic-Start
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:25(00:00:22) |  00:00:04(00:00:05) |  33.4( 41.7) |   15:33:57 (Apr01) |  567.3 MB | PBS_Generic_Opt-Post
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:25(00:00:22) |  00:00:00(00:00:00) |   0.0(  0.0) |   15:33:57 (Apr01) |  567.3 MB | PBS_Generic-Postgen HBO Optimizations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:27(00:00:23) |  00:00:02(00:00:01) |  16.7(  8.3) |   15:33:58 (Apr01) |  567.3 MB | PBS_TechMap-Start
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:27(00:00:23) |  00:00:00(00:00:00) |   0.0(  0.0) |   15:33:58 (Apr01) |  567.3 MB | PBS_TechMap-Premap HBO Optimizations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:31(00:00:28) |  00:00:04(00:00:05) |  41.6( 41.7) |   15:34:03 (Apr01) |  560.7 MB | PBS_Techmap-Global Mapping
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:32(00:00:29) |  00:00:00(00:00:01) |   8.3(  8.3) |   15:34:04 (Apr01) |  560.7 MB | PBS_TechMap-Datapath Postmap Operations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:32(00:00:29) |  00:00:00(00:00:00) |   0.0(  0.0) |   15:34:04 (Apr01) |  560.7 MB | PBS_TechMap-Postmap HBO Optimizations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+Number of threads: 1 * 1   (id: pbs_debug, time_info v1.57)
+Info: (*N*) indicates data that was populated from previously saved time_info database
+Info: CPU time includes time of parent + longest thread
+ Doing ConstProp on design:MultTop ... 
+
+PBS_TechMap-Postmap Clock Gating - Elapsed_Time 0, CPU_Time 0.0
+stamp 'PBS_TechMap-Postmap Clock Gating' being created for table 'pbs_debug'
+
+  Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:21(00:00:17) |  00:00:00(00:00:00) |   0.0(  0.0) |   15:33:52 (Apr01) |  614.0 MB | PBS_Generic-Start
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:25(00:00:22) |  00:00:04(00:00:05) |  33.4( 41.7) |   15:33:57 (Apr01) |  567.3 MB | PBS_Generic_Opt-Post
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:25(00:00:22) |  00:00:00(00:00:00) |   0.0(  0.0) |   15:33:57 (Apr01) |  567.3 MB | PBS_Generic-Postgen HBO Optimizations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:27(00:00:23) |  00:00:02(00:00:01) |  16.7(  8.3) |   15:33:58 (Apr01) |  567.3 MB | PBS_TechMap-Start
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:27(00:00:23) |  00:00:00(00:00:00) |   0.0(  0.0) |   15:33:58 (Apr01) |  567.3 MB | PBS_TechMap-Premap HBO Optimizations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:31(00:00:28) |  00:00:04(00:00:05) |  41.6( 41.7) |   15:34:03 (Apr01) |  560.7 MB | PBS_Techmap-Global Mapping
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:32(00:00:29) |  00:00:00(00:00:01) |   8.3(  8.3) |   15:34:04 (Apr01) |  560.7 MB | PBS_TechMap-Datapath Postmap Operations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:32(00:00:29) |  00:00:00(00:00:00) |   0.0(  0.0) |   15:34:04 (Apr01) |  560.7 MB | PBS_TechMap-Postmap HBO Optimizations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:32(00:00:29) |  00:00:00(00:00:00) |   0.0(  0.0) |   15:34:04 (Apr01) |  560.7 MB | PBS_TechMap-Postmap Clock Gating
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+Number of threads: 1 * 1   (id: pbs_debug, time_info v1.57)
+Info: (*N*) indicates data that was populated from previously saved time_info database
+Info: CPU time includes time of parent + longest thread
+Warning : The clock gating integrated cell is not usable. [LBR-103]
+        : The 'clock_gating_integrated_cell' attribute 'latch_posedge_precontrol' does not match with inferred definition 'none_negedge_control' for  clock gating cell 'ICGx1_ASAP7_75t_L'.
+Warning : The clock gating integrated cell is not usable. [LBR-103]
+        : The 'clock_gating_integrated_cell' attribute 'latch_posedge_precontrol' does not match with inferred definition 'none_negedge_control' for  clock gating cell 'ICGx2_ASAP7_75t_L'.
+Warning : The clock gating integrated cell is not usable. [LBR-103]
+        : The 'clock_gating_integrated_cell' attribute 'latch_posedge_precontrol' does not match with inferred definition 'none_negedge_control' for  clock gating cell 'ICGx2p67DC_ASAP7_75t_L'.
+Warning : The clock gating integrated cell is not usable. [LBR-103]
+        : The 'clock_gating_integrated_cell' attribute 'latch_posedge_precontrol' does not match with inferred definition 'none_negedge_control' for  clock gating cell 'ICGx3_ASAP7_75t_L'.
+Warning : The clock gating integrated cell is not usable. [LBR-103]
+        : The 'clock_gating_integrated_cell' attribute 'latch_posedge_precontrol' does not match with inferred definition 'none_negedge_control' for  clock gating cell 'ICGx4DC_ASAP7_75t_L'.
+Warning : The clock gating integrated cell is not usable. [LBR-103]
+        : The 'clock_gating_integrated_cell' attribute 'latch_posedge_precontrol' does not match with inferred definition 'none_negedge_control' for  clock gating cell 'ICGx4_ASAP7_75t_L'.
+Warning : The clock gating integrated cell is not usable. [LBR-103]
+        : The 'clock_gating_integrated_cell' attribute 'latch_posedge_precontrol' does not match with inferred definition 'none_negedge_control' for  clock gating cell 'ICGx5_ASAP7_75t_L'.
+Warning : The clock gating integrated cell is not usable. [LBR-103]
+        : The 'clock_gating_integrated_cell' attribute 'latch_posedge_precontrol' does not match with inferred definition 'none_negedge_control' for  clock gating cell 'ICGx5p33DC_ASAP7_75t_L'.
+Warning : The clock gating integrated cell is not usable. [LBR-103]
+        : The 'clock_gating_integrated_cell' attribute 'latch_posedge_precontrol' does not match with inferred definition 'none_negedge_control' for  clock gating cell 'ICGx6p67DC_ASAP7_75t_L'.
+Warning : The clock gating integrated cell is not usable. [LBR-103]
+        : The 'clock_gating_integrated_cell' attribute 'latch_posedge_precontrol' does not match with inferred definition 'none_negedge_control' for  clock gating cell 'ICGx8DC_ASAP7_75t_L'.
+Warning : The clock gating integrated cell is not usable. [LBR-103]
+        : The 'clock_gating_integrated_cell' attribute 'latch_posedge_precontrol' does not match with inferred definition 'none_negedge_control' for  clock gating cell 'ICGx1_ASAP7_75t_R'.
+Warning : The clock gating integrated cell is not usable. [LBR-103]
+        : The 'clock_gating_integrated_cell' attribute 'latch_posedge_precontrol' does not match with inferred definition 'none_negedge_control' for  clock gating cell 'ICGx2_ASAP7_75t_R'.
+Warning : The clock gating integrated cell is not usable. [LBR-103]
+        : The 'clock_gating_integrated_cell' attribute 'latch_posedge_precontrol' does not match with inferred definition 'none_negedge_control' for  clock gating cell 'ICGx2p67DC_ASAP7_75t_R'.
+Warning : The clock gating integrated cell is not usable. [LBR-103]
+        : The 'clock_gating_integrated_cell' attribute 'latch_posedge_precontrol' does not match with inferred definition 'none_negedge_control' for  clock gating cell 'ICGx3_ASAP7_75t_R'.
+Warning : The clock gating integrated cell is not usable. [LBR-103]
+        : The 'clock_gating_integrated_cell' attribute 'latch_posedge_precontrol' does not match with inferred definition 'none_negedge_control' for  clock gating cell 'ICGx4DC_ASAP7_75t_R'.
+Warning : The clock gating integrated cell is not usable. [LBR-103]
+        : The 'clock_gating_integrated_cell' attribute 'latch_posedge_precontrol' does not match with inferred definition 'none_negedge_control' for  clock gating cell 'ICGx4_ASAP7_75t_R'.
+Warning : The clock gating integrated cell is not usable. [LBR-103]
+        : The 'clock_gating_integrated_cell' attribute 'latch_posedge_precontrol' does not match with inferred definition 'none_negedge_control' for  clock gating cell 'ICGx5_ASAP7_75t_R'.
+Warning : The clock gating integrated cell is not usable. [LBR-103]
+        : The 'clock_gating_integrated_cell' attribute 'latch_posedge_precontrol' does not match with inferred definition 'none_negedge_control' for  clock gating cell 'ICGx5p33DC_ASAP7_75t_R'.
+Warning : The clock gating integrated cell is not usable. [LBR-103]
+        : The 'clock_gating_integrated_cell' attribute 'latch_posedge_precontrol' does not match with inferred definition 'none_negedge_control' for  clock gating cell 'ICGx6p67DC_ASAP7_75t_R'.
+Warning : The clock gating integrated cell is not usable. [LBR-103]
+        : The 'clock_gating_integrated_cell' attribute 'latch_posedge_precontrol' does not match with inferred definition 'none_negedge_control' for  clock gating cell 'ICGx8DC_ASAP7_75t_R'.
+-------------------------------------------------------------------------------
+ hi_fo_buf                  2618        0         0         0        0
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+       hi_fo_buf         0  (        0 /        0 )  0.00
+
+ 
+Incremental optimization status
+===============================
+                                   Group   
+                                  Tot Wrst     Total - - DRC Totals - -
+                           Total  Weighted      Neg      Max       Max 
+Operation                   Area   Slacks      Slack    Trans      Cap 
+ init_delay                 2618        0         0         0        0
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+       crit_upsz         0  (        0 /        0 )  0.00
+    plc_bal_star         0  (        0 /        0 )  0.00
+     drc_buftimb         0  (        0 /        0 )  0.00
+          plc_st         0  (        0 /        0 )  0.00
+    plc_st_fence         0  (        0 /        0 )  0.00
+        plc_star         0  (        0 /        0 )  0.00
+      plc_laf_st         0  (        0 /        0 )  0.00
+ plc_laf_st_fence         0  (        0 /        0 )  0.00
+     drc_buftims         0  (        0 /        0 )  0.00
+            fopt         0  (        0 /        0 )  0.00
+   plc_laf_lo_st         0  (        0 /        0 )  0.00
+       plc_lo_st         0  (        0 /        0 )  0.00
+        mb_split         0  (        0 /        0 )  0.00
+
+ 
+Local TNS optimization status
+=============================
+                                   Group   
+                                  Tot Wrst     Total - - DRC Totals - -
+                           Total  Weighted      Neg      Max       Max 
+Operation                   Area   Slacks      Slack    Trans      Cap 
+ init_tns                   2618        0         0         0        0
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+    plc_bal_star         0  (        0 /        0 )  0.00
+     drc_buftimb         0  (        0 /        0 )  0.00
+     drc_buftims         0  (        0 /        0 )  0.00
+       crit_upsz         0  (        0 /        0 )  0.00
+   plc_laf_lo_st         0  (        0 /        0 )  0.00
+       plc_lo_st         0  (        0 /        0 )  0.00
+            fopt         0  (        0 /        0 )  0.00
+       crit_dnsz         0  (        0 /        0 )  0.00
+             dup         0  (        0 /        0 )  0.00
+        setup_dn         0  (        0 /        0 )  0.00
+        mb_split         0  (        0 /        0 )  0.00
+
+PBS_TechMap-Postmap Cleanup - Elapsed_Time 2, CPU_Time 1.0
+stamp 'PBS_TechMap-Postmap Cleanup' being created for table 'pbs_debug'
+
+  Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:21(00:00:17) |  00:00:00(00:00:00) |   0.0(  0.0) |   15:33:52 (Apr01) |  614.0 MB | PBS_Generic-Start
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:25(00:00:22) |  00:00:04(00:00:05) |  30.8( 35.7) |   15:33:57 (Apr01) |  567.3 MB | PBS_Generic_Opt-Post
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:25(00:00:22) |  00:00:00(00:00:00) |   0.0(  0.0) |   15:33:57 (Apr01) |  567.3 MB | PBS_Generic-Postgen HBO Optimizations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:27(00:00:23) |  00:00:02(00:00:01) |  15.4(  7.1) |   15:33:58 (Apr01) |  567.3 MB | PBS_TechMap-Start
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:27(00:00:23) |  00:00:00(00:00:00) |   0.0(  0.0) |   15:33:58 (Apr01) |  567.3 MB | PBS_TechMap-Premap HBO Optimizations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:31(00:00:28) |  00:00:04(00:00:05) |  38.4( 35.7) |   15:34:03 (Apr01) |  560.7 MB | PBS_Techmap-Global Mapping
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:32(00:00:29) |  00:00:00(00:00:01) |   7.7(  7.1) |   15:34:04 (Apr01) |  560.7 MB | PBS_TechMap-Datapath Postmap Operations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:32(00:00:29) |  00:00:00(00:00:00) |   0.0(  0.0) |   15:34:04 (Apr01) |  560.7 MB | PBS_TechMap-Postmap HBO Optimizations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:32(00:00:29) |  00:00:00(00:00:00) |   0.0(  0.0) |   15:34:04 (Apr01) |  560.7 MB | PBS_TechMap-Postmap Clock Gating
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:33(00:00:31) |  00:00:01(00:00:02) |   7.7( 14.3) |   15:34:06 (Apr01) |  560.7 MB | PBS_TechMap-Postmap Cleanup
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+Number of threads: 1 * 1   (id: pbs_debug, time_info v1.57)
+Info: (*N*) indicates data that was populated from previously saved time_info database
+Info: CPU time includes time of parent + longest thread
+PBS_Techmap-Post_MBCI - Elapsed_Time 0, CPU_Time 0.0
+stamp 'PBS_Techmap-Post_MBCI' being created for table 'pbs_debug'
+
+  Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:21(00:00:17) |  00:00:00(00:00:00) |   0.0(  0.0) |   15:33:52 (Apr01) |  614.0 MB | PBS_Generic-Start
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:25(00:00:22) |  00:00:04(00:00:05) |  30.8( 35.7) |   15:33:57 (Apr01) |  567.3 MB | PBS_Generic_Opt-Post
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:25(00:00:22) |  00:00:00(00:00:00) |   0.0(  0.0) |   15:33:57 (Apr01) |  567.3 MB | PBS_Generic-Postgen HBO Optimizations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:27(00:00:23) |  00:00:02(00:00:01) |  15.4(  7.1) |   15:33:58 (Apr01) |  567.3 MB | PBS_TechMap-Start
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:27(00:00:23) |  00:00:00(00:00:00) |   0.0(  0.0) |   15:33:58 (Apr01) |  567.3 MB | PBS_TechMap-Premap HBO Optimizations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:31(00:00:28) |  00:00:04(00:00:05) |  38.4( 35.7) |   15:34:03 (Apr01) |  560.7 MB | PBS_Techmap-Global Mapping
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:32(00:00:29) |  00:00:00(00:00:01) |   7.7(  7.1) |   15:34:04 (Apr01) |  560.7 MB | PBS_TechMap-Datapath Postmap Operations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:32(00:00:29) |  00:00:00(00:00:00) |   0.0(  0.0) |   15:34:04 (Apr01) |  560.7 MB | PBS_TechMap-Postmap HBO Optimizations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:32(00:00:29) |  00:00:00(00:00:00) |   0.0(  0.0) |   15:34:04 (Apr01) |  560.7 MB | PBS_TechMap-Postmap Clock Gating
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:33(00:00:31) |  00:00:01(00:00:02) |   7.7( 14.3) |   15:34:06 (Apr01) |  560.7 MB | PBS_TechMap-Postmap Cleanup
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:33(00:00:31) |  00:00:00(00:00:00) |   0.0(  0.0) |   15:34:06 (Apr01) |  560.7 MB | PBS_Techmap-Post_MBCI
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+Number of threads: 1 * 1   (id: pbs_debug, time_info v1.57)
+Info: (*N*) indicates data that was populated from previously saved time_info database
+Info: CPU time includes time of parent + longest thread
+##>=================== Cadence Confidential (Mapping-Logical) ===================
+##>Main Thread Summary:
+##>----------------------------------------------------------------------------------------
+##>STEP                           Elapsed       WNS       TNS     Insts      Area    Memory
+##>----------------------------------------------------------------------------------------
+##>M:Initial                            0         -         -      2664      3645       567
+##>M:Pre Cleanup                        0         -         -      2664      3645       567
+##>M:Setup                              0         -         -         -         -         -
+##>M:Launch ST                          0         -         -         -         -         -
+##>M:Design Partition                   0         -         -         -         -         -
+##>M:Create Partition Netlists          0         -         -         -         -         -
+##>M:Init Power                         0         -         -         -         -         -
+##>M:Budgeting                          0         -         -         -         -         -
+##>M:Derenv-DB                          0         -         -         -         -         -
+##>M:Debug Outputs                      0         -         -         -         -         -
+##>M:ST loading                         0         -         -         -         -         -
+##>M:Distributed                        0         -         -         -         -         -
+##>M:Timer                              0         -         -         -         -         -
+##>M:Assembly                           0         -         -         -         -         -
+##>M:DFT                                0         -         -         -         -         -
+##>M:DP Operations                      1         -         -      1098      1747       560
+##>M:Const Prop                         0       615         0      1098      1747       560
+##>M:Cleanup                            2       615         0      1098      1747       560
+##>M:MBCI                               0         -         -      1098      1747       560
+##>M:Const Gate Removal                 0         -         -         -         -         -
+##>M:Misc                               5
+##>----------------------------------------------------------------------------------------
+##>Total Elapsed                        8
+##>========================================================================================
+Info    : Done mapping. [SYNTH-5]
+        : Done mapping 'MultTop'.
+      timing.setup.tns  timing.setup.wns  snapshot
+UM:*                                      syn_map
+@file(fused_syn.tcl) 165: set_db syn_opt_effort high
+  Setting attribute of root '/': 'syn_opt_effort' = high
+@file(fused_syn.tcl) 166: syn_opt 
+Current PLE settings:
+
+Aspect ratio        : 1.00
+Shrink factor       : 1.00
+Scale of res/length : 1.00
+Scale of cap/length : 1.00
+Net derating factor : 1.00
+Thermal factor      : 1.00
+Via Resistance      : 10.00 ohm (from qrc_tech_file)
+Site size           : 1.22 um (from lef [tech+cell])
+
+                                   Capacitance  
+  Layer                             / Length         Data source:
+Name        Direction Utilization  (pF/micron)       qrc_tech_file
+------------------------------------------------
+LISD            V         0.00        0.000041  
+M1              H         1.00        0.000054  
+M2              V         1.00        0.000051  
+M3              H         1.00        0.000050  
+M4              V         1.00        0.000053  
+M5              H         1.00        0.000052  
+M6              V         1.00        0.000053  
+M7              H         1.00        0.000052  
+M8              V         1.00        0.000054  
+M9              H         1.00        0.000052  
+
+                                    Resistance   
+  Layer                              / Length         Data source:
+Name        Direction Utilization  (ohm/micron)       qrc_tech_file
+-------------------------------------------------
+LISD            V         0.00        10.000000  
+M1              H         1.00        16.955556  
+M2              V         1.00        16.955556  
+M3              H         1.00        15.011111  
+M4              V         1.00        10.791667  
+M5              H         1.00         9.712500  
+M6              V         1.00         7.021875  
+M7              H         1.00         7.021875  
+M8              V         1.00         5.115000  
+M9              H         1.00         5.115000  
+
+                                        Area     
+  Layer                               / Length        Data source:
+Name        Direction Utilization     (micron)        lef_library
+-------------------------------------------------
+M1              V         0.00         0.072000  
+M2              H         1.00         0.072000  
+M3              V         1.00         0.072000  
+M4              H         1.00         0.096000  
+M5              V         1.00         0.096000  
+M6              H         1.00         0.128000  
+M7              V         1.00         0.128000  
+M8              H         1.00         0.160000  
+M9              V         1.00         0.160000  
+Pad             H         1.00         0.160000  
+
+Info    : Incrementally optimizing. [SYNTH-7]
+        : Incrementally optimizing 'MultTop' using 'high' effort.
+ 
+Incremental optimization status
+===============================
+                                   Group   
+                                  Tot Wrst     Total - - DRC Totals - -
+                           Total  Weighted      Neg      Max       Max 
+Operation                   Area   Slacks      Slack    Trans      Cap 
+ init_iopt                  2618        0         0         0        0
+-------------------------------------------------------------------------------
+ const_prop                 2618        0         0         0        0
+-------------------------------------------------------------------------------
+ hi_fo_buf                  2618        0         0         0        0
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+       hi_fo_buf         0  (        0 /        0 )  0.00
+
+ 
+Incremental optimization status
+===============================
+                                   Group   
+                                  Tot Wrst     Total - - DRC Totals - -
+                           Total  Weighted      Neg      Max       Max 
+Operation                   Area   Slacks      Slack    Trans      Cap 
+ init_delay                 2618        0         0         0        0
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+        crit_msz         0  (        0 /        0 )  0.00
+       crit_upsz         0  (        0 /        0 )  0.00
+       crit_slew         0  (        0 /        0 )  0.00
+        setup_dn         0  (        0 /        0 )  0.00
+    plc_bal_star         0  (        0 /        0 )  0.00
+     drc_buftimb         0  (        0 /        0 )  0.00
+          plc_st         0  (        0 /        0 )  0.00
+    plc_st_fence         0  (        0 /        0 )  0.00
+        plc_star         0  (        0 /        0 )  0.00
+      plc_laf_st         0  (        0 /        0 )  0.00
+ plc_laf_st_fence         0  (        0 /        0 )  0.00
+     drc_buftims         0  (        0 /        0 )  0.00
+   plc_laf_lo_st         0  (        0 /        0 )  0.00
+       plc_lo_st         0  (        0 /        0 )  0.00
+            fopt         0  (        0 /        0 )  0.00
+       crit_swap         0  (        0 /        0 )  0.00
+       mux2_swap         0  (        0 /        0 )  0.00
+       crit_dnsz         0  (        0 /        0 )  0.00
+       load_swap         0  (        0 /        0 )  0.00
+            fopt         0  (        0 /        0 )  0.00
+        setup_dn         0  (        0 /        0 )  0.00
+       load_isol         0  (        0 /        0 )  0.00
+       load_isol         0  (        0 /        0 )  0.00
+        move_for         0  (        0 /        0 )  0.00
+        move_for         0  (        0 /        0 )  0.00
+          rem_bi         0  (        0 /        0 )  0.00
+         offload         0  (        0 /        0 )  0.00
+          rem_bi         0  (        0 /        0 )  0.00
+         offload         0  (        0 /        0 )  0.00
+           phase         0  (        0 /        0 )  0.00
+        in_phase         0  (        0 /        0 )  0.00
+       merge_bit         0  (        0 /        0 )  0.00
+     merge_idrvr         0  (        0 /        0 )  0.00
+     merge_iload         0  (        0 /        0 )  0.00
+    merge_idload         0  (        0 /        0 )  0.00
+      merge_drvr         0  (        0 /        0 )  0.00
+      merge_load         0  (        0 /        0 )  0.00
+          decomp         0  (        0 /        0 )  0.00
+        p_decomp         0  (        0 /        0 )  0.00
+        levelize         0  (        0 /        0 )  0.00
+        mb_split         0  (        0 /        0 )  0.00
+             dup         0  (        0 /        0 )  0.00
+      mux_retime         0  (        0 /        0 )  0.00
+         buf2inv         0  (        0 /        0 )  0.00
+             exp         0  (        0 /        0 )  0.00
+       gate_deco         0  (        0 /        0 )  0.00
+       gcomp_tim         0  (        0 /        0 )  0.00
+  inv_pair_2_buf         0  (        0 /        0 )  0.00
+
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+         crr_220         0  (        0 /        0 )  0.00
+        crr_glob         0  (        0 /        0 )  0.00
+         crr_200         0  (        0 /        0 )  0.00
+        crr_glob         0  (        0 /        0 )  0.00
+         crr_300         0  (        0 /        0 )  0.00
+        crr_glob         0  (        0 /        0 )  0.00
+         crr_400         0  (        0 /        0 )  0.00
+        crr_glob         0  (        0 /        0 )  0.00
+         crr_111         0  (        0 /        0 )  0.00
+        crr_glob         0  (        0 /        0 )  0.00
+         crr_210         0  (        0 /        0 )  0.00
+        crr_glob         0  (        0 /        0 )  0.00
+         crr_110         0  (        0 /        0 )  0.00
+        crr_glob         0  (        0 /        0 )  0.00
+         crr_101         0  (        0 /        0 )  0.00
+        crr_glob         0  (        0 /        0 )  0.00
+         crr_201         0  (        0 /        0 )  0.00
+        crr_glob         0  (        0 /        0 )  0.00
+         crr_211         0  (        0 /        0 )  0.00
+        crr_glob         0  (        0 /        0 )  0.00
+        crit_msz         0  (        0 /        0 )  0.00
+       crit_upsz         0  (        0 /        0 )  0.00
+       crit_slew         0  (        0 /        0 )  0.00
+        setup_dn         0  (        0 /        0 )  0.00
+    plc_bal_star         0  (        0 /        0 )  0.00
+     drc_buftimb         0  (        0 /        0 )  0.00
+          plc_st         0  (        0 /        0 )  0.00
+    plc_st_fence         0  (        0 /        0 )  0.00
+        plc_star         0  (        0 /        0 )  0.00
+      plc_laf_st         0  (        0 /        0 )  0.00
+ plc_laf_st_fence         0  (        0 /        0 )  0.00
+     drc_buftims         0  (        0 /        0 )  0.00
+       plc_lo_st         0  (        0 /        0 )  0.00
+            fopt         0  (        0 /        0 )  0.00
+       crit_swap         0  (        0 /        0 )  0.00
+       mux2_swap         0  (        0 /        0 )  0.00
+       crit_dnsz         0  (        0 /        0 )  0.00
+       load_swap         0  (        0 /        0 )  0.00
+            fopt         0  (        0 /        0 )  0.00
+        setup_dn         0  (        0 /        0 )  0.00
+       load_isol         0  (        0 /        0 )  0.00
+       load_isol         0  (        0 /        0 )  0.00
+        move_for         0  (        0 /        0 )  0.00
+        move_for         0  (        0 /        0 )  0.00
+          rem_bi         0  (        0 /        0 )  0.00
+         offload         0  (        0 /        0 )  0.00
+          rem_bi         0  (        0 /        0 )  0.00
+         offload         0  (        0 /        0 )  0.00
+       merge_bit         0  (        0 /        0 )  0.00
+     merge_idrvr         0  (        0 /        0 )  0.00
+     merge_iload         0  (        0 /        0 )  0.00
+    merge_idload         0  (        0 /        0 )  0.00
+      merge_drvr         0  (        0 /        0 )  0.00
+      merge_load         0  (        0 /        0 )  0.00
+           phase         0  (        0 /        0 )  0.00
+          decomp         0  (        0 /        0 )  0.00
+        p_decomp         0  (        0 /        0 )  0.00
+        levelize         0  (        0 /        0 )  0.00
+        mb_split         0  (        0 /        0 )  0.00
+        in_phase         0  (        0 /        0 )  0.00
+             dup         0  (        0 /        0 )  0.00
+      mux_retime         0  (        0 /        0 )  0.00
+         buf2inv         0  (        0 /        0 )  0.00
+             exp         0  (        0 /        0 )  0.00
+       gate_deco         0  (        0 /        0 )  0.00
+       gcomp_tim         0  (        0 /        0 )  0.00
+  inv_pair_2_buf         0  (        0 /        0 )  0.00
+ init_drc                   2618        0         0         0        0
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+          plc_st         0  (        0 /        0 )  0.00
+        plc_star         0  (        0 /        0 )  0.00
+        drc_bufs         0  (        0 /        0 )  0.00
+        drc_fopt         0  (        0 /        0 )  0.00
+        drc_bufb         0  (        0 /        0 )  0.00
+      simple_buf         0  (        0 /        0 )  0.00
+             dup         0  (        0 /        0 )  0.00
+       crit_dnsz         0  (        0 /        0 )  0.00
+       crit_upsz         0  (        0 /        0 )  0.00
+       crit_slew         0  (        0 /        0 )  0.00
+
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+          plc_st         0  (        0 /        0 )  0.00
+        plc_star         0  (        0 /        0 )  0.00
+      drc_buf_sp         0  (        0 /        0 )  0.00
+        drc_bufs         0  (        0 /        0 )  0.00
+        drc_fopt         0  (        0 /        0 )  0.00
+        drc_bufb         0  (        0 /        0 )  0.00
+      simple_buf         0  (        0 /        0 )  0.00
+             dup         0  (        0 /        0 )  0.00
+       crit_dnsz         0  (        0 /        0 )  0.00
+       crit_upsz         0  (        0 /        0 )  0.00
+
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+          plc_st         0  (        0 /        0 )  0.00
+        plc_star         0  (        0 /        0 )  0.00
+      drc_buf_sp         0  (        0 /        0 )  0.00
+        drc_bufs         0  (        0 /        0 )  0.00
+        drc_fopt         0  (        0 /        0 )  0.00
+        drc_bufb         0  (        0 /        0 )  0.00
+             dup         0  (        0 /        0 )  0.00
+       crit_dnsz         0  (        0 /        0 )  0.00
+       crit_upsz         0  (        0 /        0 )  0.00
+
+ init_tns                   2618        0         0         0        0
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+            fopt         0  (        0 /        0 )  0.00
+    plc_bal_star         0  (        0 /        0 )  0.00
+     drc_buftimb         0  (        0 /        0 )  0.00
+     drc_buftims         0  (        0 /        0 )  0.00
+        crit_msz         0  (        0 /        0 )  0.00
+       crit_upsz         0  (        0 /        0 )  0.00
+   plc_laf_lo_st         0  (        0 /        0 )  0.00
+       plc_lo_st         0  (        0 /        0 )  0.00
+       crit_swap         0  (        0 /        0 )  0.00
+       mux2_swap         0  (        0 /        0 )  0.00
+       crit_dnsz         0  (        0 /        0 )  0.00
+       load_swap         0  (        0 /        0 )  0.00
+            fopt         0  (        0 /        0 )  0.00
+        setup_dn         0  (        0 /        0 )  0.00
+       load_isol         0  (        0 /        0 )  0.00
+       load_isol         0  (        0 /        0 )  0.00
+        move_for         0  (        0 /        0 )  0.00
+        move_for         0  (        0 /        0 )  0.00
+          rem_bi         0  (        0 /        0 )  0.00
+         offload         0  (        0 /        0 )  0.00
+          rem_bi         0  (        0 /        0 )  0.00
+         offload         0  (        0 /        0 )  0.00
+       merge_bit         0  (        0 /        0 )  0.00
+     merge_idrvr         0  (        0 /        0 )  0.00
+     merge_iload         0  (        0 /        0 )  0.00
+    merge_idload         0  (        0 /        0 )  0.00
+      merge_drvr         0  (        0 /        0 )  0.00
+      merge_load         0  (        0 /        0 )  0.00
+           phase         0  (        0 /        0 )  0.00
+          decomp         0  (        0 /        0 )  0.00
+        p_decomp         0  (        0 /        0 )  0.00
+        levelize         0  (        0 /        0 )  0.00
+        mb_split         0  (        0 /        0 )  0.00
+             dup         0  (        0 /        0 )  0.00
+      mux_retime         0  (        0 /        0 )  0.00
+       crr_local         0  (        0 /        0 )  0.00
+         buf2inv         0  (        0 /        0 )  0.00
+
+ init_area                  2618        0         0         0        0
+ io_phase                   2595        0         0         0        0
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+           undup         0  (        0 /        0 )  0.00
+         rem_buf         0  (        0 /        0 )  0.00
+         rem_inv         0  (        0 /        0 )  0.00
+        merge_bi         0  (        0 /        0 )  0.00
+      rem_inv_qb         0  (        0 /        0 )  0.00
+    seq_res_area         0  (        0 /        0 )  0.00
+        io_phase        19  (       19 /       19 )  0.04
+       gate_comp         0  (        0 /        0 )  0.04
+       gcomp_mog         0  (        0 /        0 )  0.02
+       glob_area        30  (        0 /       30 )  0.01
+       area_down         0  (        0 /        0 )  0.01
+      size_n_buf         0  (        0 /        0 )  0.00
+  gate_deco_area         0  (        0 /        0 )  0.00
+         rem_buf         0  (        0 /        0 )  0.00
+         rem_inv         0  (        0 /        0 )  0.00
+        merge_bi         0  (        0 /        0 )  0.00
+      rem_inv_qb         0  (        0 /        0 )  0.00
+
+ 
+Incremental optimization status
+===============================
+                                   Group   
+                                  Tot Wrst     Total - - DRC Totals - -
+                           Total  Weighted      Neg      Max       Max 
+Operation                   Area   Slacks      Slack    Trans      Cap 
+ init_delay                 2595        0         0         0        0
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+         crr_220         0  (        0 /        0 )  0.00
+        crr_glob         0  (        0 /        0 )  0.00
+         crr_200         0  (        0 /        0 )  0.00
+        crr_glob         0  (        0 /        0 )  0.00
+         crr_300         0  (        0 /        0 )  0.00
+        crr_glob         0  (        0 /        0 )  0.00
+         crr_400         0  (        0 /        0 )  0.00
+        crr_glob         0  (        0 /        0 )  0.00
+         crr_111         0  (        0 /        0 )  0.00
+        crr_glob         0  (        0 /        0 )  0.00
+         crr_210         0  (        0 /        0 )  0.00
+        crr_glob         0  (        0 /        0 )  0.00
+         crr_110         0  (        0 /        0 )  0.00
+        crr_glob         0  (        0 /        0 )  0.00
+         crr_101         0  (        0 /        0 )  0.00
+        crr_glob         0  (        0 /        0 )  0.00
+         crr_201         0  (        0 /        0 )  0.00
+        crr_glob         0  (        0 /        0 )  0.00
+         crr_211         0  (        0 /        0 )  0.00
+        crr_glob         0  (        0 /        0 )  0.00
+        crit_msz         0  (        0 /        0 )  0.00
+       crit_upsz         0  (        0 /        0 )  0.00
+       crit_slew         0  (        0 /        0 )  0.00
+        setup_dn         0  (        0 /        0 )  0.00
+    plc_bal_star         0  (        0 /        0 )  0.00
+     drc_buftimb         0  (        0 /        0 )  0.00
+          plc_st         0  (        0 /        0 )  0.00
+    plc_st_fence         0  (        0 /        0 )  0.00
+        plc_star         0  (        0 /        0 )  0.00
+      plc_laf_st         0  (        0 /        0 )  0.00
+ plc_laf_st_fence         0  (        0 /        0 )  0.00
+     drc_buftims         0  (        0 /        0 )  0.00
+       plc_lo_st         0  (        0 /        0 )  0.00
+            fopt         0  (        0 /        0 )  0.00
+       crit_swap         0  (        0 /        0 )  0.00
+       mux2_swap         0  (        0 /        0 )  0.00
+       crit_dnsz         0  (        0 /        0 )  0.00
+       load_swap         0  (        0 /        0 )  0.00
+            fopt         0  (        0 /        0 )  0.00
+        setup_dn         0  (        0 /        0 )  0.00
+       load_isol         0  (        0 /        0 )  0.00
+       load_isol         0  (        0 /        0 )  0.00
+        move_for         0  (        0 /        0 )  0.00
+        move_for         0  (        0 /        0 )  0.00
+          rem_bi         0  (        0 /        0 )  0.00
+         offload         0  (        0 /        0 )  0.00
+          rem_bi         0  (        0 /        0 )  0.00
+         offload         0  (        0 /        0 )  0.00
+       merge_bit         0  (        0 /        0 )  0.00
+     merge_idrvr         0  (        0 /        0 )  0.00
+     merge_iload         0  (        0 /        0 )  0.00
+    merge_idload         0  (        0 /        0 )  0.00
+      merge_drvr         0  (        0 /        0 )  0.00
+      merge_load         0  (        0 /        0 )  0.00
+           phase         0  (        0 /        0 )  0.00
+          decomp         0  (        0 /        0 )  0.00
+        p_decomp         0  (        0 /        0 )  0.00
+        levelize         0  (        0 /        0 )  0.00
+        mb_split         0  (        0 /        0 )  0.00
+        in_phase         0  (        0 /        0 )  0.00
+             dup         0  (        0 /        0 )  0.00
+      mux_retime         0  (        0 /        0 )  0.00
+         buf2inv         0  (        0 /        0 )  0.00
+             exp         0  (        0 /        0 )  0.00
+       gate_deco         0  (        0 /        0 )  0.00
+       gcomp_tim         0  (        0 /        0 )  0.00
+  inv_pair_2_buf         0  (        0 /        0 )  0.00
+ init_drc                   2595        0         0         0        0
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+          plc_st         0  (        0 /        0 )  0.00
+        plc_star         0  (        0 /        0 )  0.00
+        drc_bufs         0  (        0 /        0 )  0.00
+        drc_fopt         0  (        0 /        0 )  0.00
+        drc_bufb         0  (        0 /        0 )  0.00
+      simple_buf         0  (        0 /        0 )  0.00
+             dup         0  (        0 /        0 )  0.00
+       crit_dnsz         0  (        0 /        0 )  0.00
+       crit_upsz         0  (        0 /        0 )  0.00
+       crit_slew         0  (        0 /        0 )  0.00
+
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+          plc_st         0  (        0 /        0 )  0.00
+        plc_star         0  (        0 /        0 )  0.00
+        drc_bufs         0  (        0 /        0 )  0.00
+        drc_fopt         0  (        0 /        0 )  0.00
+        drc_bufb         0  (        0 /        0 )  0.00
+      simple_buf         0  (        0 /        0 )  0.00
+             dup         0  (        0 /        0 )  0.00
+       crit_dnsz         0  (        0 /        0 )  0.00
+       crit_upsz         0  (        0 /        0 )  0.00
+
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+          plc_st         0  (        0 /        0 )  0.00
+        plc_star         0  (        0 /        0 )  0.00
+        drc_bufs         0  (        0 /        0 )  0.00
+        drc_fopt         0  (        0 /        0 )  0.00
+        drc_bufb         0  (        0 /        0 )  0.00
+             dup         0  (        0 /        0 )  0.00
+       crit_dnsz         0  (        0 /        0 )  0.00
+       crit_upsz         0  (        0 /        0 )  0.00
+
+ init_tns                   2595        0         0         0        0
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+            fopt         0  (        0 /        0 )  0.00
+    plc_bal_star         0  (        0 /        0 )  0.00
+     drc_buftimb         0  (        0 /        0 )  0.00
+     drc_buftims         0  (        0 /        0 )  0.00
+        crit_msz         0  (        0 /        0 )  0.00
+       crit_upsz         0  (        0 /        0 )  0.00
+   plc_laf_lo_st         0  (        0 /        0 )  0.00
+       plc_lo_st         0  (        0 /        0 )  0.00
+       crit_swap         0  (        0 /        0 )  0.00
+       mux2_swap         0  (        0 /        0 )  0.00
+       crit_dnsz         0  (        0 /        0 )  0.00
+       load_swap         0  (        0 /        0 )  0.00
+            fopt         0  (        0 /        0 )  0.00
+        setup_dn         0  (        0 /        0 )  0.00
+       load_isol         0  (        0 /        0 )  0.00
+       load_isol         0  (        0 /        0 )  0.00
+        move_for         0  (        0 /        0 )  0.00
+        move_for         0  (        0 /        0 )  0.00
+          rem_bi         0  (        0 /        0 )  0.00
+         offload         0  (        0 /        0 )  0.00
+          rem_bi         0  (        0 /        0 )  0.00
+         offload         0  (        0 /        0 )  0.00
+       merge_bit         0  (        0 /        0 )  0.00
+     merge_idrvr         0  (        0 /        0 )  0.00
+     merge_iload         0  (        0 /        0 )  0.00
+    merge_idload         0  (        0 /        0 )  0.00
+      merge_drvr         0  (        0 /        0 )  0.00
+      merge_load         0  (        0 /        0 )  0.00
+           phase         0  (        0 /        0 )  0.00
+          decomp         0  (        0 /        0 )  0.00
+        p_decomp         0  (        0 /        0 )  0.00
+        levelize         0  (        0 /        0 )  0.00
+        mb_split         0  (        0 /        0 )  0.00
+             dup         0  (        0 /        0 )  0.00
+      mux_retime         0  (        0 /        0 )  0.00
+       crr_local         0  (        0 /        0 )  0.00
+         buf2inv         0  (        0 /        0 )  0.00
+
+ init_area                  2595        0         0         0        0
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+           undup         0  (        0 /        0 )  0.00
+         rem_buf         0  (        0 /        0 )  0.00
+         rem_inv         0  (        0 /        0 )  0.00
+        merge_bi         0  (        0 /        0 )  0.00
+      rem_inv_qb         0  (        0 /        0 )  0.00
+        io_phase         0  (        0 /        0 )  0.00
+       gate_comp         0  (        0 /        0 )  0.04
+       gcomp_mog         0  (        0 /        0 )  0.02
+       glob_area        30  (        0 /       30 )  0.01
+       area_down         0  (        0 /        0 )  0.01
+      size_n_buf         0  (        0 /        0 )  0.00
+  gate_deco_area         0  (        0 /        0 )  0.00
+
+ 
+Incremental optimization status
+===============================
+                                   Group   
+                                  Tot Wrst     Total - - DRC Totals - -
+                           Total  Weighted      Neg      Max       Max 
+Operation                   Area   Slacks      Slack    Trans      Cap 
+ init_delay                 2595        0         0         0        0
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+        crit_msz         0  (        0 /        0 )  0.00
+       crit_upsz         0  (        0 /        0 )  0.00
+       crit_slew         0  (        0 /        0 )  0.00
+        setup_dn         0  (        0 /        0 )  0.00
+    plc_bal_star         0  (        0 /        0 )  0.00
+     drc_buftimb         0  (        0 /        0 )  0.00
+          plc_st         0  (        0 /        0 )  0.00
+    plc_st_fence         0  (        0 /        0 )  0.00
+        plc_star         0  (        0 /        0 )  0.00
+      plc_laf_st         0  (        0 /        0 )  0.00
+ plc_laf_st_fence         0  (        0 /        0 )  0.00
+     drc_buftims         0  (        0 /        0 )  0.00
+   plc_laf_lo_st         0  (        0 /        0 )  0.00
+       plc_lo_st         0  (        0 /        0 )  0.00
+            fopt         0  (        0 /        0 )  0.00
+       crit_swap         0  (        0 /        0 )  0.00
+       mux2_swap         0  (        0 /        0 )  0.00
+       crit_dnsz         0  (        0 /        0 )  0.00
+       load_swap         0  (        0 /        0 )  0.00
+            fopt         0  (        0 /        0 )  0.00
+        setup_dn         0  (        0 /        0 )  0.00
+       load_isol         0  (        0 /        0 )  0.00
+       load_isol         0  (        0 /        0 )  0.00
+        move_for         0  (        0 /        0 )  0.00
+        move_for         0  (        0 /        0 )  0.00
+          rem_bi         0  (        0 /        0 )  0.00
+         offload         0  (        0 /        0 )  0.00
+          rem_bi         0  (        0 /        0 )  0.00
+         offload         0  (        0 /        0 )  0.00
+           phase         0  (        0 /        0 )  0.00
+        in_phase         0  (        0 /        0 )  0.00
+       merge_bit         0  (        0 /        0 )  0.00
+     merge_idrvr         0  (        0 /        0 )  0.00
+     merge_iload         0  (        0 /        0 )  0.00
+    merge_idload         0  (        0 /        0 )  0.00
+      merge_drvr         0  (        0 /        0 )  0.00
+      merge_load         0  (        0 /        0 )  0.00
+          decomp         0  (        0 /        0 )  0.00
+        p_decomp         0  (        0 /        0 )  0.00
+        levelize         0  (        0 /        0 )  0.00
+        mb_split         0  (        0 /        0 )  0.00
+             dup         0  (        0 /        0 )  0.00
+      mux_retime         0  (        0 /        0 )  0.00
+         buf2inv         0  (        0 /        0 )  0.00
+             exp         0  (        0 /        0 )  0.00
+       gate_deco         0  (        0 /        0 )  0.00
+       gcomp_tim         0  (        0 /        0 )  0.00
+  inv_pair_2_buf         0  (        0 /        0 )  0.00
+
+ init_drc                   2595        0         0         0        0
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+          plc_st         0  (        0 /        0 )  0.00
+        plc_star         0  (        0 /        0 )  0.00
+        drc_bufs         0  (        0 /        0 )  0.00
+        drc_fopt         0  (        0 /        0 )  0.00
+        drc_bufb         0  (        0 /        0 )  0.00
+      simple_buf         0  (        0 /        0 )  0.00
+             dup         0  (        0 /        0 )  0.00
+       crit_dnsz         0  (        0 /        0 )  0.00
+       crit_upsz         0  (        0 /        0 )  0.00
+       crit_slew         0  (        0 /        0 )  0.00
+
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+          plc_st         0  (        0 /        0 )  0.00
+        plc_star         0  (        0 /        0 )  0.00
+        drc_bufs         0  (        0 /        0 )  0.00
+        drc_fopt         0  (        0 /        0 )  0.00
+        drc_bufb         0  (        0 /        0 )  0.00
+      simple_buf         0  (        0 /        0 )  0.00
+             dup         0  (        0 /        0 )  0.00
+       crit_dnsz         0  (        0 /        0 )  0.00
+       crit_upsz         0  (        0 /        0 )  0.00
+
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+          plc_st         0  (        0 /        0 )  0.00
+        plc_star         0  (        0 /        0 )  0.00
+        drc_bufs         0  (        0 /        0 )  0.00
+        drc_fopt         0  (        0 /        0 )  0.00
+        drc_bufb         0  (        0 /        0 )  0.00
+             dup         0  (        0 /        0 )  0.00
+       crit_dnsz         0  (        0 /        0 )  0.00
+       crit_upsz         0  (        0 /        0 )  0.00
+
+==================================
+Stage : incr_opt 
+==================================
+  =================
+   Message Summary
+  =================
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+|   Id    |  Sev   |Count |                                                      Message Text                                                       |
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+| CFM-1   |Info    |    1 |Wrote dofile.                                                                                                            |
+| CFM-212 |Info    |    1 |Forcing flat compare.                                                                                                    |
+| CFM-5   |Info    |    1 |Wrote formal verification information.                                                                                   |
+| LBR-103 |Warning |   40 |The clock gating integrated cell is not usable.                                                                          |
+|         |        |      |The 'clock_gating_integrated_cell' attribute and state table or latch group definition for the clock gating integrated   |
+|         |        |      | cell is not matching.                                                                                                   |
+| LBR-155 |Info    |    8 |Mismatch in unateness between 'timing_sense' attribute and the function.                                                 |
+|         |        |      |The 'timing_sense' attribute will be respected.                                                                          |
+| PA-7    |Info    |    4 |Resetting power analysis results.                                                                                        |
+|         |        |      |All computed switching activities are removed.                                                                           |
+| SYNTH-5 |Info    |    1 |Done mapping.                                                                                                            |
+| SYNTH-7 |Info    |    1 |Incrementally optimizing.                                                                                                |
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+Info    : Done incrementally optimizing. [SYNTH-8]
+        : Done incrementally optimizing 'MultTop'.
+      timing.setup.tns  timing.setup.wns  snapshot
+UM:*                                      syn_opt
+@file(fused_syn.tcl) 171: write_hdl -mapped > /home/yukunw/dacs-lab3/experiment/dacs2024/lab3/results/26631dadda_bit16fb6545dd58885bf2431c21988dff9e3bddef7e0086f449065a0c1e66cdebbb80/genus-rundir/data/MultTop-mapped.v
+@file(fused_syn.tcl) 172: write_sdf > /home/yukunw/dacs-lab3/experiment/dacs2024/lab3/results/26631dadda_bit16fb6545dd58885bf2431c21988dff9e3bddef7e0086f449065a0c1e66cdebbb80/genus-rundir/data/MultTop.sdf
+Warning : Default value for an option has changed in this release. [WSDF-104]
+        : Default value for -setuphold has changed from split to merge_always. Specify '-setuphold split' to preserve the behavior of the previous release.
+        : Specify the option explicitly.
+Warning : Default value for an option has changed in this release. [WSDF-104]
+        : Default value for -recrem has changed from split to merge_always. Specify '-recrem split' to preserve the behavior of the previous release.
+@file(fused_syn.tcl) 173: write_sdc -view setup_view > /home/yukunw/dacs-lab3/experiment/dacs2024/lab3/results/26631dadda_bit16fb6545dd58885bf2431c21988dff9e3bddef7e0086f449065a0c1e66cdebbb80/genus-rundir/data/constraint_setup.sdc
+Finished SDC export (command execution time mm:ss (real) = 00:00).
+@file(fused_syn.tcl) 174: write_sdc -view hold_view > /home/yukunw/dacs-lab3/experiment/dacs2024/lab3/results/26631dadda_bit16fb6545dd58885bf2431c21988dff9e3bddef7e0086f449065a0c1e66cdebbb80/genus-rundir/data/constraint_hold.sdc
+Finished SDC export (command execution time mm:ss (real) = 00:00).
+@file(fused_syn.tcl) 179: set report_dir /home/yukunw/dacs-lab3/experiment/dacs2024/lab3/results/26631dadda_bit16fb6545dd58885bf2431c21988dff9e3bddef7e0086f449065a0c1e66cdebbb80/genus-rundir/reports
+@file(fused_syn.tcl) 181: report_timing > ${report_dir}/timing.rpt
+Warning : Timing problems have been detected in this design. [TIM-11]
+        : The design is 'MultTop'.
+        : Use 'check_timing_intent' or 'report timing -lint' to report more information.
+@file(fused_syn.tcl) 182: report_power -by_hierarchy -levels all > ${report_dir}/power.rpt
+Info    : Joules engine is used. [RPT-16]
+        : Joules engine is being used for the command report_power.
+Info   : ACTP-0001 [ACTPInfo] Activity propagation started for stim#0 netlist
+       : MultTop
+Info   : ACTP-0009 [ACTPInfo] Activity Propagation Progress Report :   0%   1%   2%   3%   4%   5%   6%   7%   8%   9%  10%  11%  12%  13%  14%  15%  16%  17%  18%  19%  20%  21%  22%  23%  24%  25%  26%  27%  28%  29%  30%  31%  32%  33%  34%  35%  36%  37%  38%  39%  40%  41%  42%  43%  44%  45%  46%  47%  48%  49%  50%  51%  52%  53%  54%  55%  56%  57%  58%  59%  60%  61%  62%  63%  64%  65%  66%  67%  68%  69%  70%  71%  72%  73%  74%  75%  76%  77%  78%  79%  80%  81%  82%  83%  84%  85%  86%  87%  88%  89%  90%  91%  92%  93%  94%  95%  96%  97%  98%  99% 100%
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 [PwrInfo] compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -compat : voltus
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 [PwrInfo] Skipping activity propagation due to -skip_ap
+       : option....
+Warning: PWRA-0302 [PwrWarn] Frequency scaling is not applicable for vectorless
+       : flow. Ignoring frequency scaling.
+Info   : PWRA-0002 Voltus compat mode is set for power analysis.
+Warning: PWRA-0304 [PwrWarn] -stim option is not applicable with vectorless mode
+       : of power analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : PWRA-0009 [PwrInfo] Power Computation Progress Report :   0%   1%   2%   3%   4%   5%   6%   7%   8%   9%  10%  11%  12%  13%  14%  15%  16%  17%  18%  19%  20%  21%  22%  23%  24%  25%  26%  27%  28%  29%  30%  31%  32%  33%  34%  35%  36%  37%  38%  39%  40%  41%  42%  43%  44%  45%  46%  47%  48%  49%  50%  51%  52%  53%  54%  55%  56%  57%  58%  59%  60%  61%  62%  63%  64%  65%  66%  67%  68%  69%  70%  71%  72%  73%  74%  75%  76%  77%  78%  79%  80%  81%  82%  83%  84%  85%  86%  87%  88%  89%  90%  91%  92%  93%  94%  95%  96%  97%  98%  99% 100%
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 [PwrInfo] Completed successfully.
+       : Info=9, Warn=2, Error=0, Fatal=0
+Output file: /home/yukunw/dacs-lab3/experiment/dacs2024/lab3/results/26631dadda_bit16fb6545dd58885bf2431c21988dff9e3bddef7e0086f449065a0c1e66cdebbb80/genus-rundir/reports/power.rpt
+@file(fused_syn.tcl) 183: report_area > ${report_dir}/area.rpt
+@file(fused_syn.tcl) 184: report_design_rules > ${report_dir}/drc.rpt
+@file(fused_syn.tcl) 185: report_qor > ${report_dir}/qor.rpt
+@file(fused_syn.tcl) 191: report_timing -from [ all_inputs ] -to [ all_outputs ] -nworst 1 > ${report_dir}/timing_in_to_out.rpt
+Warning : Timing problems have been detected in this design. [TIM-11]
+        : The design is 'MultTop'.
+@file(fused_syn.tcl) 194: exit 0
